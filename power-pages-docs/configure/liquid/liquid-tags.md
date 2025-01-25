@@ -5,12 +5,11 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/09/2023
+ms.date: 01/15/2025
 ms.subservice:
 ms.author: gisingh
 ms.reviewer: dmartens
 contributors:
-    - nickdoelman
     - GitanjaliSingh33msft
 ---
 
@@ -47,6 +46,4 @@ You can tell the engine to strip all leading or trailing white space by adding a
 
 [Liquid types](liquid-types.md)  
 [Liquid Objects](liquid-objects.md)  
-[Liquid Filters](liquid-filters.md) 
-
-
+[Liquid Filters](liquid-filters.md)

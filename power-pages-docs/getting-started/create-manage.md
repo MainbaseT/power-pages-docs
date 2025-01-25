@@ -1,16 +1,14 @@
 ---
 title: Create a site with Power Pages
 description: Learn how to create a site with Power Pages.
-author: nickdoelman
+author: dmartens
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/09/2024
 ms.subservice:
 ms.author: tbhagwat
-ms.reviewer: kkendrick
+ms.reviewer: danamartens
 contributors:
-    - nickdoelman
-    - ProfessorKendrick
     - DanaMartens
 ---
 
@@ -78,9 +76,8 @@ When you create a site with a new trial environment, the site metadata for all t
 
 The following video is an overview of using Power Pages to create websites.<br />
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE557dn]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=5a509a83-addc-4851-ab2b-58c24ebe0cef]
 
 ## Next steps
 
 [Use design studio](use-design-studio.md)
-

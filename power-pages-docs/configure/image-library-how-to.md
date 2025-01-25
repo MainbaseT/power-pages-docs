@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to: Create an image library using cloud flow and Power Pages"
 description: Learn how to create an image library in Power Pages.
 author: nageshbhat-msft
@@ -10,14 +10,13 @@ ms.author: nabha
 ms.reviewer: dmartens
 contributors:
     - nageshbhat-msft
-    - ProfessorKendrick
 ---
 
 # How to: Create an image library using cloud flow and Power Pages
 
 This article provides a step-by-step guide on creating Power Pages and harnessing Power Automate cloud flows to set up an image library website. This website allows authenticated users to effectively manage and organize a gallery of images.<br />
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RW1eDxT]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c8ecedeb-e357-4bd8-8571-f8377eff9845]
 
 ## Prerequisite
 
@@ -437,7 +436,7 @@ After creating the flow and providing access to authenticated web role, you can 
             ;
                 payload.eventData = JSON.stringify(data);
                 shell .ajaxSafePost({
-                    type: "POST", url: _deleteImageFlowURL, data: JSON.stringify(payload) 
+                    type: "POST", url: _deleteImageFlowURL, data: payload 
             }
             ) .done(function (response) {
                     const result = JSON.parse(response);
@@ -459,7 +458,7 @@ After creating the flow and providing access to authenticated web role, you can 
         ;
             payload.eventData = JSON.stringify(data);
             shell .ajaxSafePost({
-                type: "POST", url: _getImageListFlowURL, data: JSON.stringify(payload)
+                type: "POST", url: _getImageListFlowURL, data: payload
         }
         ) .done(function (response) {
                 const result = JSON.parse(response);
@@ -504,7 +503,7 @@ After creating the flow and providing access to authenticated web role, you can 
                     ;
                      payload.eventData = JSON.stringify(data);
                      shell .ajaxSafePost({
-                         type: "POST", url: _uploadImageFlowURL, data: JSON.stringify(payload) 
+                         type: "POST", url: _uploadImageFlowURL, data: payload 
                 }
                 ) .done(function (response) {
                      const result = JSON.parse(response);
@@ -549,4 +548,3 @@ To test the flow integration functionality:
 1. Choose an image.
 
 1. Select **Open**.
-
