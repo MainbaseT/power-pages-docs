@@ -1,22 +1,19 @@
 ---
-title: Set up payments integration (preview)
+title: Set up payments integration
 description: Learn how to set up payments integration with your website. 
 author: sandhangitms
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/10/2024
+ms.date: 11/01/2024
 ms.subservice:
 ms.author: sandhan
 ms.reviewer: dmartens
 contributors:
     - sandhangitms
-    - ProfessorKendrick
     - DanaMartens
 ---
 
-# Set up payments integration (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+# Set up payments integration
 
 Enable your Power Pages site to accept payments by using design studio's Set up workspace. With this no-code integration, you can add a payment component to your multistep form, enabling your website to integrate with a payment provider.
 
@@ -31,10 +28,8 @@ To accept payments on your Power Pages site, you must complete these steps:
 [Step 3: Enable the payments experience on your form](#step-3-enable-the-payments-experience-on-your-form). In this step, the maker includes the form and enables digital payments on the required step for the multistep form.
 
 > [!IMPORTANT]
-> - This is a preview feature.
 > - This feature only works with the [enhanced data model](../admin/enhanced-data-model.md).
 > - This feature requires [Power Pages website build version 9.5.10.x](/power-platform/released-versions/portals/pagesversion9510x) for the payments control to show on the site.
-> - [!INCLUDE [preview-tags](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -45,7 +40,7 @@ To accept payments on your Power Pages site, you must complete these steps:
 ## Step 1: Install the package
 
 1. In the design studio, select **Set up**.
-1. Under **Integrations**, select **External apps (preview)**.
+1. Under **Integrations**, select **External apps**.
 1. Select the **Install** action for Stripe.
 1. Once the package installation is complete, restart the website from [Site Actions](admin-overview.md#site-actions) in the admin center.
 
@@ -58,7 +53,7 @@ Once you install the package, you can begin to configure Stripe for your Power P
 ### Step 2a: Obtain your Stripe keys
 
 1. In the design studio, choose **Set up**.
-1. Under **Integrations**, select **External apps (preview)**.
+1. Under **Integrations**, select **External apps**.
 1. In the Integrations table, select the **Manage** action for Stripe.
 1. Go to the [Stripe Marketplace](https://go.microsoft.com/fwlink/?linkid=2268776) and install the Microsoft Power Pages Payments app.
 1. After the app is installed, obtain the **Publishable** and **Restricted** keys required to enable this integration. These values are needed in later steps.
@@ -85,7 +80,7 @@ If you choose Azure Key Vault as your storage type, complete the following steps
 
     The app name is the same as your website name with a prefix of "Portals-". If your site name is *"Woodgrove Bank Applications"*, then the app name on the Azure portal is *"Portals-Woodgrove Bank Applications"*. Note this app registration name for use in the following steps.
 
-    :::image type="content" source="media/set-up-payments-integration/azure-app-registration.png" alt-text="Screenshot of the app registration in Azure for a Power Pages site.":::
+    :::image type="content" source="media/set-up-payments-integration/azure-app-registration.svg" alt-text="Screenshot of the app registration in Azure for a Power Pages site.":::
 
 1. Sign in to the [Azure portal](https://portal.azure.com) and navigate to **Key Vaults**.
 1. Create a new key vault or use an existing one. While creating a new key vault, you have to choose a permission model. You can choose either [Azure role-based access control](/azure/role-based-access-control/overview) or a [Key Vault access policy](/azure/key-vault/general/assign-access-policy-portal). To see the appropriate steps, select the below tab based on your choice of permission model.

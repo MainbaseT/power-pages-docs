@@ -7,11 +7,9 @@ ms.custom: template-tutorial
 ms.date: 02/14/2023
 ms.subservice:
 ms.author: avishwakarma
-ms.reviewer: kkendrick
+ms.reviewer: danamartens
 contributors:
     - ankitavish
-    - nickdoelman
-    - ProfessorKendrick
 ---
 
 # Tutorial: Set up page permissions
@@ -35,7 +33,7 @@ When you create your site, you may want to protect one or more pages so that onl
 
 This video shows you how to restrict access to a specific webpage.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE5daPh]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=51dd98d2-4faa-4a33-a5cc-1471bd5c165b]
 
 The following steps outline how to configure page permissions to restrict access to a specific page.
 

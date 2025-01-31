@@ -5,12 +5,11 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/09/2023
+ms.date: 01/15/2025
 ms.subservice: 
 ms.author: gisingh
 ms.reviewer: dmartens
 contributors:
-    - nickdoelman
     - GitanjaliSingh33msft
 ---
 
@@ -32,7 +31,7 @@ Hello, Dave.
 
 ## unless
 
-Like if, except it executes a block of code if a given condition is**not** met.
+Like if, except it executes a block of code if a given condition **isn't** met.
 
 ```
 {% unless page.title == 'Home' %}
@@ -90,5 +89,3 @@ Hello, stranger.
 - [Variable tags](variable-tags.md)
 - [Template tags](template-tags.md)
 - [Dataverse table tags](dataverse-liquid-tags.md)
-
-

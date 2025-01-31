@@ -166,6 +166,8 @@
                   href: getting-started/add-list.md
                 - name: Add an AI-generated form using Copilot
                   href: getting-started/add-form-copilot.md
+                - name: Add AI summary list (preview)
+                  href: getting-started/add-ai-summary-list.md
                 - name: Add a form manually
                   href: getting-started/add-form.md
                 - name: Add an AI-generated multistep form using Copilot (preview)
@@ -185,7 +187,7 @@
             - name: Structure your site map
               href: getting-started/structure-site.md
             - name: Use Visual Studio Code editor (preview)
-              href: configure/visual-studio-code-editor.md              
+              href: configure/visual-studio-code-editor.md          
     - name:  Style your site
       items:
         - name: Styling workspace overview
@@ -198,7 +200,7 @@
               href: configure/bootstrap-overview.md
             - name: Create new sites with Bootstrap version 5
               href: configure/bootstrap-version-5.md
-            - name: Migrate existing sites to Bootstrap version 5 (preview)
+            - name: Migrate existing sites to Bootstrap version 5
               href: configure/migrate-bootstrap.md
         - name: Manage CSS files
           href: configure/manage-css.md
@@ -222,12 +224,16 @@
           items:
           - name: Add a copilot
             href: getting-started/enable-chatbot.md
+          - name: Customize your copilot
+            href: getting-started/customize-your-copilot.md
           - name: Generate answers from public data using Bing search
             href: getting-started/force-bing-index.md
           - name: Replace copilot with a Microsoft Copilot Studio copilot
             href: getting-started/pva-bot-how-to.md
           - name: Configure Omnichannel with site copilot
             href: configure/omnichannel.md
+          - name: Manage copilot provisioning
+            href: getting-started/manage-copilot-provisioning.md
         - name: Progressive web applications
           items:
             - name: Overview
@@ -256,6 +262,8 @@
           href: admin/migrate-enhanced-data-model.md
 - name: Administer Power Pages
   items:
+    - name: Use the new admin center (preview)
+      href: admin/new-admin-overview.md
     - name: Use the admin center
       href: admin/admin-overview.md
     - name: Manage websites from the admin center
@@ -298,6 +306,8 @@
       href: configure/devtools-addon.md
     - name: View Power Pages activity logging in Microsoft Purview (preview)
       href: /power-platform/admin/logging-power-pages
+    - name: Control use of Generative AI features for users (preview)
+      href: admin/copilot-governance.md
     - name: Compliance and privacy
       href: admin/compliance-privacy.md
     - name: Governance
@@ -480,7 +490,7 @@
       href: configure/azure-front-door.md
     - name: Set up DocuSign integration (preview)
       href: admin/set-up-docusign-integration.md
-    - name: Set up payments integration (preview)
+    - name: Set up payments integration
       href: admin/set-up-payments-integration.md
     - name: Integrate Power BI
       items:
@@ -568,6 +578,12 @@
           href: configure/webapi-how-to.md
         - name: "How to: use Web API to upload to Azure"
           href: configure/webapi-azure-blob.md
+    - name: Use Data Summarization API (preview)
+      items:
+        - name: Data summarization API overview
+          href: configure/data-summarization-api.md
+        - name: "How to: Add Copilot summarization to case page"
+          href: configure/add-copilot-summarization-to-case-page.md
     - name: Use code components
       items:
         - name: Code component overview
@@ -606,6 +622,8 @@
           href: configure/add-code-copilot.md
         - name: Use Visual Studio Code for the Web editor (preview)
           href: configure/visual-studio-code-editor.md 
+        - name: Use @powerpages within GitHub Copilot Chat (preview)
+          href: configure/github-copilot-chat.md    
     - name: Use Power Fx in Power Pages (preview)
       href: configure/power-fx.md
     - name: Use admin APIs
@@ -624,6 +642,8 @@
       href: security/site-visibility.md
     - name: Disable anonymous access (preview)
       href: security/disable-anonymous-access.md
+    - name: Control external authentication providers (preview)
+      href: security/external-auth-control.md
     - name: Authentication
       items:
         - name: Overview
@@ -658,6 +678,8 @@
               href: configure/azure-ad-b2c.md
             - name: Microsoft Entra ID
               href: security/authentication/openid-settings.md
+            - name: Microsoft Entra External ID
+              href: security/authentication/entra-external-id.md
             - name: OpenID Connect FAQs
               href: security/authentication/openid-faqs.md
         - name: SAML 2.0
@@ -777,7 +799,11 @@
     - name: FAQ for generating code
       href: faqs-pro-developer.md     
     - name: FAQ for generative AI search
-      href: faqs-generative-ai-search.md                     
+      href: faqs-generative-ai-search.md
+    - name: FAQ for the AI summary list
+      href: faqs-ai-summary-list.md             
+    - name: FAQ for data summarization API
+      href: faqs-data-summarization.md   
 - name: Compliance and accessibility
   items:
     - name: Accessibility
@@ -786,6 +812,14 @@
       href: configure/implement-privacy.md
     - name: Cookies
       href: admin/cookies.md
+- name: Responding to DSR requests
+  items:
+    - name: Overview
+      href: admin/privacy-dsr-summary.md
+    - name: Export data
+      href: admin/privacy-dsr-export.md
+    - name: Delete data
+      href: admin/privacy-dsr-delete.md
 - name: System requirements, limits, and configuration
   href: system-requirements.md
 - name: Power Pages FAQs
@@ -802,3 +836,13 @@
       href: /power-platform/released-versions/portals
     - name: Power Pages solutions
       href: /power-platform/released-versions/pagessolutions
+- name: Resources
+  items:
+  - name: Microsoft Credentials for Power Platform
+    href: /credentials/browse/?products=power-platform&wt.mc_id=appliedskills_AppliedSkillsPowerPlatformProductDoc_webpage_wwl
+  - name: Blog
+    href: https://www.microsoft.com/power-platform/blog/power-pages/
+  - name: Forums
+    href: https://aka.ms/PowerPagesCommunity
+  - name: Support
+    href: https://www.microsoft.com/power-platform/products/power-pages/support

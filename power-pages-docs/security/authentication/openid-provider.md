@@ -1,13 +1,12 @@
 ---
 title: Set up an OpenID Connect provider
 description: Learn how to set up an OpenID Connect provider for use with sites you create with Microsoft Power Pages.
-ms.date: 05/30/2024
+ms.date: 09/10/2024
 ms.topic: how-to
 author: sandhangitmsft
 ms.author: sandhan
-ms.reviewer: kkendrick
+ms.reviewer: danamartens
 contributors:
-    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
     - nageshbhat-msft
@@ -38,7 +37,7 @@ OpenID Connect providers [Azure AD B2C](azure-ad-b2c-provider.md), [Microsoft En
 
 ## Set up the OpenID Connect provider in Power Pages
 
-1. In your Power Pages site, select **Set up** > **Identity providers**.
+1. In your Power Pages site, select **Security** > **Identity providers**.
 
     If no identity providers appear, make sure **External login** is set to **On** in your site's [general authentication settings](configure-site.md#select-general-authentication-settings).
 
@@ -72,7 +71,7 @@ OpenID Connect providers [Azure AD B2C](azure-ad-b2c-provider.md), [Microsoft En
 
 Return to the Power Pages **Configure identity provider** page you left earlier and enter the following values. Optionally, change the [**additional settings**](#additional-settings-in-power-pages) as needed. Select **Confirm** when you're finished.
 
-- **Authority**: Enter the authority URL in the following format: `https://login.microsoftonline.com/<Directory (tenant) ID>/`, where *<Directory (tenant) ID>* is the directory (tenant) ID of the application [you created](#create-an-app-registration-in-the-identity-provider). For example, if the directory (tenant) ID in the Azure portal is `7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb`, then the authority URL is `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/​`.
+- **Authority**: Enter the authority URL in the following format: `https://login.microsoftonline.com/<Directory (tenant) ID>/`, where *<Directory (tenant) ID>* is the directory (tenant) ID of the application [you created](#create-an-app-registration-in-the-identity-provider). For example, if the directory (tenant) ID in the Azure portal is `aaaabbbb-0000-cccc-1111-dddd2222eeee`, then the authority URL is `https://login.microsoftonline.com/aaaabbbb-0000-cccc-1111-dddd2222eeee/​`.
 
 - **Client ID​**: Paste the application or client ID of the application [you created](#create-an-app-registration-in-the-identity-provider).
 

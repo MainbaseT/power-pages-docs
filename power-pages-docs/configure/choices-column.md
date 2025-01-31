@@ -5,14 +5,12 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/10/2023
+ms.date: 01/09/2025
 ms.subservice: 
 ms.author: nabha
 ms.reviewer: dmartens
 contributors:
     - nageshbhat-msft
-    - nickdoelman
-    - ProfessorKendrick
 ---
 
 # Configure a choices column on portals
@@ -148,9 +146,4 @@ Body –
 "sample\_outdooractivities": "1,4,8",
 }
 ```
-
-## Known issues
-
-Choices control will not be available in [basic and multistep form metadata](configure-basic-form-metadata.md) to apply extra behavior modification logic or override the functionality of form fields.
-
 

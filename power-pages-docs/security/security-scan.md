@@ -1,15 +1,14 @@
 ---
 title: Run security scan (preview)
 description: Learn how to identify and address security vulnerabilities in Power Pages with security scan.
-author: ProfessorKendrick
+author: dmartens
 ms.topic: how-to
 ms.custom: 
-ms.date: 05/31/2024
+ms.date: 11/13/2024
 ms.subservice:
 ms.author: avishwakarma
-ms.reviewer: kkendrick
+ms.reviewer: danamartens
 contributors:
-    - ProfessorKendrick
 ---
 
 # Run security scan (preview)
@@ -50,3 +49,8 @@ Once the scan is complete, you'll receive an email. After you receive the email 
 
 The summary report includes a list of failed checks and corresponding alerts with descriptions of how to fix the alerts. You can optionally download the report as a PDF. Report summaries for security scan are only supported in English-US language.
 
+
+
+## Related information
+
+[Run security scan with Power Pages (video)](https://youtu.be/Mj8oIRmSjjE?feature=shared)

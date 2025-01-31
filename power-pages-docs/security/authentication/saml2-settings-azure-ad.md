@@ -1,13 +1,12 @@
 ---
 title: Set up a SAML 2.0 provider with Microsoft Entra ID
 description: Learn how to set up a SAML 2.0 identity provider with Microsoft Entra ID use with sites you create with Microsoft Power Pages.
-ms.date: 07/19/2023
+ms.date: 09/10/2024
 ms.topic: how-to
 author: sandhangitmsft
 ms.author: sandhan
-ms.reviewer: kkendrick
+ms.reviewer: danamartens
 contributors:
-    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ms.custom: bap-template
@@ -30,7 +29,7 @@ This article describes the following steps:
 
 Set Microsoft Entra as an identity provider for your site.
 
-1. In your Power Pages site, select **Set up** > **Identity providers**.
+1. In your Power Pages site, select **Security** > **Identity providers**.
 
     If no identity providers appear, make sure **External login** is set to **On** in your site's [general authentication settings](configure-site.md#select-general-authentication-settings).
 
@@ -81,7 +80,7 @@ Set Microsoft Entra as an identity provider for your site.
 
 1. To the right of **Application ID URI**, select **Add**.
 
-1. Enter your site URL as the **App ID URI**.
+1. Enter your site URL as the App ID URI. If the site url is not accepted as a valid value for App ID URI, retain the default app ID URI. Copy the value of App ID URI and save it for a later step.
 
 1. Select **Save**.
 
@@ -97,7 +96,7 @@ Return to the Power Pages **Configure identity provider** page you left earlier 
 
 - **Authentication type**: Paste the `entityID` value [you copied](#create-an-app-registration-in-azure).
 
-- **Service provider realm**: Enter your site's URL.
+- **Service provider realm**: Paste the App ID URI value [you copied](#create-an-app-registration-in-azure). 
 
 - **Assertion service consumer URL**: If your site uses a custom domain name, enter the custom URL; otherwise, leave the default value, which should be your site's reply URL. Be sure the value is exactly the same as the redirect URI of the application [you created](#create-an-app-registration-in-azure).
 
