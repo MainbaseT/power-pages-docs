@@ -5,12 +5,11 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/09/2023
+ms.date: 01/15/2025
 ms.subservice:
 ms.author: gisingh
 ms.reviewer: dmartens
 contributors:
-    - nickdoelman
     - GitanjaliSingh33msft
 ---
 
@@ -75,5 +74,4 @@ This is a forum page.
 - [Conditional](liquid-conditional-operators.md)  
 - [Liquid Objects](liquid-objects.md)  
 - [Liquid Tags](liquid-tags.md)  
-- [Liquid Filters](liquid-filters.md) 
-
+- [Liquid Filters](liquid-filters.md)

@@ -3,11 +3,9 @@ title: Provide access to external audiences
 description: Learn how to allow external audiences to use a local account to access sites you create with Microsoft Power Pages.
 ms.date: 07/20/2023
 ms.topic: conceptual
-author: nickdoelman
-ms.author: kkendrick
+author: dmartens
+ms.author: dmartens
 contributors:
-    - nickdoelman
-    - ProfessorKendrick
 ms.custom: bap-template
 ---
 # Provide access to external audiences
@@ -31,13 +29,13 @@ You can also send a user an [invitation to register locally](invite-contacts.md)
 
 1. Create or select a contact.
 
-1. Select the **Contact - Portal Contact** form.
+1. Select the **Portal Contact (Enhanced)** form.
 
 1. Select the **Web Authentication** tab.
 
 1. Enter a **Username**.
 
-    :::image type="content" source="media/user-management/config-contact-record.svg" alt-text="Screenshot of a contact record in the Portal Management app, with the username box on the Web Authentication tab highlighted.":::
+    :::image type="content" source="media/user-management/config-contact-record.png" alt-text="Screenshot of a contact record in the Portal Management app, with the username box on the Web Authentication tab highlighted.":::
 
 1. Select **Save**.
 

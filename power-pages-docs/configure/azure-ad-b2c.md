@@ -8,9 +8,8 @@ ms.custom:
 ms.date: 06/03/2024
 ms.subservice:
 ms.author: sandhan
-ms.reviewer: kkendrick
+ms.reviewer: danamartens
 contributors:
-    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
     - DanaMartens
@@ -389,7 +388,7 @@ Site settings are required to configure cross-origin resource sharing (CORS) to 
 | Name                              | Value                             |
 |-----------------------------------|-----------------------------------|
 | HTTP/Access-Control-Allow-Methods | `GET, OPTIONS`                      |
-| HTTP/Access-Control-Allow-Origin  | `https://tenant-name.b2clogin.com` <br> For example, if tenant name is ContosoOrg, enter `https://contosoorg.b2clogin.com`. <br> **Note**: You can get this value by copying the domain name part of the [Issuer URL](../security/authentication/azure-ad-b2c-provider.md). Ensure you exclude the non-domain part of the Issuer URL value&mdash;for example, exclude&mdash;`/tfp/799f7b50-f7b9-49ec-ba78-67eb67210998/b2c_1_contoso/v2.0`. |
+| HTTP/Access-Control-Allow-Origin  | `https://tenant-name.b2clogin.com` <br> For example, if tenant name is ContosoOrg, enter `https://contosoorg.b2clogin.com`. <br> **Note**: You can get this value by copying the domain name part of the [Issuer URL](../security/authentication/azure-ad-b2c-provider.md). Ensure you exclude the non-domain part of the Issuer URL value&mdash;for example, exclude&mdash;`/tfp/aaaabbbb-0000-cccc-1111-dddd2222eeee/b2c_1_contoso/v2.0`. |
 
 To create site settings:
 
@@ -433,7 +432,7 @@ For a complete list of other CORS settings, see [CORS protocol support](cors-sup
 
 1. For **Custom page URI**, enter the complete URL of your websites's custom webpage that you created in [step 3](#step-3-create-a-webpage).
 
-    For example, for the page named `azure-ad-b2c-sign-in` in portal `https://contoso.powerappsportals.com`, use the custom page URI as `https://contoso.powerappsportals.com/azure-ad-b2c-sign-in`.
+    For example, for the page named `azure-ad-b2c-sign-in` in portal `https://contoso.powerappsportals.com`, use the custom page URI as `https://contoso.powerappsportals.com/azure-ad-b2c-sign-in/`.
 
 Your Azure AD B2C tenant is now configured to use the custom page for sign-up and sign-in experience.
 

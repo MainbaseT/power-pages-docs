@@ -5,12 +5,11 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/15/2023
+ms.date: 01/15/2025
 ms.subservice:
 ms.author: gisingh
 ms.reviewer: dmartens
 contributors:
-    - nickdoelman
     - GitanjaliSingh33msft
 ---
 
@@ -621,7 +620,7 @@ Formats a DateTime value according to the [ISO 8601](https://en.wikipedia.org/wi
 
 ### date\_to\_rfc822
 
-Formats a DateTime value according to the [RFC 822](https://www.ietf.org/rfc/rfc0822.txt) standard. Useful when creating [*RSS feeds*](https://cyber.law.harvard.edu/rss/rss.html).  
+Formats a DateTime value according to the [RFC 822](https://www.w3.org/Protocols/rfc822/#z28) standard. Useful when creating [*RSS feeds*](https://cyber.law.harvard.edu/rss/rss.html).  
 
 **Code**
 
@@ -1664,6 +1663,3 @@ Renders a string as Liquid code. This code has access to the current Liquid exec
 - [Liquid Objects](liquid-objects.md)  
 - [Liquid Tags](liquid-tags.md)  
 - [Liquid Filters](liquid-filters.md)  
-
-
-

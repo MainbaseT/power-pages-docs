@@ -5,12 +5,11 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/30/2023
+ms.date: 01/15/2025
 ms.subservice:
 ms.author: gisingh
 ms.reviewer: dmartens
 contributors:
-    - nickdoelman
     - GitanjaliSingh33msft
 ---
 
@@ -244,7 +243,7 @@ Render the list associated with the current page as a paginated sortable table. 
 {% endentitylist %}
 ```
 
-### See also
+## Related information
 
 - [Create a custom page template by using Liquid and a web template page template](../../getting-started/tutorial-add-custom-page-layout.md)  
 - [Create a custom page template to render an RSS feed](render-rss-custom-web-template.md)  
