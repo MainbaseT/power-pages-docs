@@ -1,8 +1,8 @@
 ---
-title: Customize your copilot
-description: Learn how to customize the copilot experience in Microsoft Power Pages in this step-by-step guide.
+title: Customize your agent
+description: Learn how to customize an agent experience in Microsoft Power Pages in this step-by-step guide.
 ms.topic: how-to
-ms.date: 11/14/2024
+ms.date: 06/20/2025
 author: nageshbhat-msft
 ms.author: nabha
 ms.reviewer: dmartens
@@ -18,19 +18,19 @@ ms.custom:
   - bap-template
 ---
 
-# Customize your copilot
+# Customize your agent
 
-When you create a copilot for a website, the copilot uses the content from the hosting site to generate responses. Microsoft Dataverse indexes site content and configured tables, and Copilot Studio summarizes the indexed content and tables to generate responses.
+When you create an agent for a website, it uses the content from the hosting site to generate responses. Microsoft Dataverse indexes site content and configured tables. Copilot Studio summarizes the indexed content and tables to generate responses.
 
-Authenticated site users receive tailored, summarized answers that are aligned with their web roles. To improve the content model for authenticated site users, refine the data by following these steps:
+Authenticated site users get tailored, summarized answers aligned with their web roles. Improve the content model for authenticated site users by refining the data with these steps:
 
 1. In Power Pages, go to the [Set up workspace](../configure/setup-workspace.md).
-1. Under **Copilot**, select **Add copilot**.
+1. Under **Copilot**, select **Add agent**.
 1. Under **Refine your data**, select **Make changes**.
-1. Select **Choose tables lookup control** to select or clear the selection of tables.
+1. Select **Choose tables lookup control** to choose or clear tables.
 
-    - You can select multiple tables in this section. Ensure that every table that you select is used on the site.
-    - On subsequent pages, specify the page where the table is used, to generate the citation URL.
+    - You can select multiple tables in this section. Ensure that every table you choose is used on the site.
+    - On subsequent pages, specify the page where the table is used to generate the citation URL.
 
 1. Select **Next**.
 1. Under **Choose tables**, select the table that contains the columns and the page link that you want to select. A table appears only if it has at least one multiline column.
@@ -43,28 +43,28 @@ Authenticated site users receive tailored, summarized answers that are aligned w
     > - Ensure that you select the correct page. Otherwise, the bot provides an incorrect citation URL for the answers.
     > - The page must use `id` as the query string parameter. If you use any other parameter name, the citation URL doesn't work correctly.
 
-1. Under **Choose columns**, select the list of columns that are used on the page. Only columns that have multiline text are available for selection.
+1. Under **Choose columns**, select the columns used on the page. Only columns with multiline text are available for selection.
 1. Select **Next**, and review your selection.
 1. Select **Save** to submit the changes.
 
-## Customize the copilot's appearance
+## Customize the agent appearance
 
-You can customize the copilot's style by overriding the default Cascading Style Sheet (CSS) classes. To do so, add a `style` element to the header template and override the values by following these steps:
+You can customize the agent's style by overriding the default Cascading Style Sheet (CSS) classes. To do this, add a `style` element to the header template and override the values by following these steps:
 
-1. Go to the site's [code editor](../configure/visual-studio-code-editor.md).
+1. Open the site's [code editor](../configure/visual-studio-code-editor.md).
 1. In the **Explorer** navigation, expand the **web-templates** folder.
 1. Open **Header.html**.
-1. Add your `style` / `script` element.
+1. Add your `style` or `script` element.
 
     :::image type="content" source="media/enable-chatbot/code-editor.png" alt-text="Screenshot of Visual Studio, highlighting the web-templates folder, the Header.html file, and the style element with a CSS selector.":::
 
 1. Override the appropriate styles.
 
-### Copilot widget
+### Agent widget
 
 :::image type="content" source="media/enable-chatbot/open-chat-window-css.svg" alt-text="Screenshot of the chatbot widget.":::
 
-Copilot collapsed icon:
+Agent collapsed icon:
 
 ```css
 .pva-embedded-web-chat-widget {
@@ -82,7 +82,7 @@ Tooltip:
 }
 ```
 
-icon image:
+Icon image:
 
 ```script
 <script>
@@ -93,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 ```
 
- > [!NOTE]
- > - Replace `<image URL>` with the actual image source URL. Reference an external path or upload an image to the [Web File](../configure/web-files.md) table and use its URL.
+  > [!NOTE]
+ > Replace `<image URL>` with the actual image source URL. Use an external path or upload an image to the [Web File](../configure/web-files.md) table and use its URL.
 
-### Copilot elements
+### Agent elements
 
 The CSS samples in this section provide examples that show how to customize each of the numbered chatbot elements in the following screenshot.
 
@@ -112,7 +112,7 @@ The CSS samples in this section provide examples that show how to customize each
 }
 ```
 
-#### 2. Height and width
+#### 2. Height and width settings
 
 ```css
 .pva-embedded-web-chat[data-minimized='false'] {
@@ -123,7 +123,7 @@ The CSS samples in this section provide examples that show how to customize each
 }
 ```
 
-#### 3. Copilot window
+#### 3. Agent window
 
 ```css
 .pva-embedded-web-chat-window {
@@ -131,7 +131,7 @@ The CSS samples in this section provide examples that show how to customize each
 }
 ```
 
-#### 4. Bubble from the copilot
+#### 4. Bubble from an agent
 
 Background color:
 
@@ -185,7 +185,7 @@ Text color:
 }
 ```
 
-#### 7. Privacy message
+#### 7. Privacy message settings
 
 Background color:
 
@@ -209,4 +209,4 @@ Text color:
 
 - [Overview of AI-powered and Copilot features in Power Pages](../configure/ai-copilot-overview.md)
 - [Generate answers from public data using Bing search](../getting-started/force-bing-index.md)
-- [Responsible AI: FAQ for site copilot](../faqs-chatbot.md)
+- [Responsible AI: FAQ for site agent](../faq-site-agent.md)
