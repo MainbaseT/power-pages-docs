@@ -2,7 +2,7 @@
 title: Set table permissions in Power Pages
 description: Learn how to set and manage table permissions.
 author: gitanjalisingh33msft
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 7/25/2024
 ms.author: gisingh
@@ -194,7 +194,7 @@ The following message is displayed when you try to save a table permission witho
 
 ### Next Steps
 
-[Web Application Firewall DRS rule groups and rules for Power Pages (preview)](web-application-firewall-rule-groups.md)
+[Configure managed rules in Web Application Firewall for Power Pages](configure-managed-rules.md)
 
 ### See also
 
