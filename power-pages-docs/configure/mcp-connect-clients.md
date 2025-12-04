@@ -158,7 +158,7 @@ Configure the agent to be available in Microsoft Teams and Microsoft 365 Copilot
    :::image type="content" source="media/mcp-connect-clients/image24.png" alt-text="Screenshot showing the successful channel addition with access links.":::
 
 > [!NOTE]
-> For detailed guidance on creating channels and configuring permissions, see [Add an agent to Microsoft Teams](https://learn.microsoft.com/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams).
+> For detailed guidance on creating channels and configuring permissions, see [Add an agent to Microsoft Teams](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams).
 
 ## Connect as end user
 
@@ -223,10 +223,10 @@ First-time users need to establish a connection through the Connection Manager.
 Now that you've connected AI clients to your MCP Server, explore other scenarios and use cases.
 
 > [!div class="nextstepaction"]
-> [MCP Server functional scenarios](mcp-scenarios.md)
+> [MCP Server functional scenarios](mcp-overview.md)
 
 ## Related content
 
 - [Model Context Protocol (MCP) Server for Power Pages overview](mcp-overview.md)
 - [Enable MCP Server in Power Pages](enable-mcp-server.md)
-- [Install an agent in Teams and Microsoft 365 Copilot](https://learn.microsoft.com/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#install-an-agent-in-teams-and-microsoft-365-copilot)
+- [Install an agent in Teams and Microsoft 365 Copilot](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#install-an-agent-in-teams-and-microsoft-365-copilot)

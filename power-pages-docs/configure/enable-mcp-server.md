@@ -179,10 +179,10 @@ Select **Save & Close**.
 After enabling MCP Server, you need to configure redirect URIs for the AI clients that will connect to your server.
 
 > [!div class="nextstepaction"]
-> [Configure redirect URIs for MCP clients](configure-redirect-uris.md)
+> [Configure redirect URIs for MCP clients](mcp-redirect-uri.md)
 
 ## Related content
 
 - [Model Context Protocol (MCP) Server for Power Pages overview](mcp-overview.md)
-- [Connect AI clients to MCP Server](connect-mcp-clients.md)
+- [Connect AI clients to MCP Server](mcp-connect-clients.md)
 - [Set up Microsoft Entra External ID with Power Pages](../security/authentication/entra-external-id.md)

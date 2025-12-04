@@ -42,7 +42,8 @@ Before you implement MCP Server for Power Pages:
 
 ## Next steps
 
-- [Configure MCP Server for Power Pages](mcp-configure.md)
+- [Enable MCP Server for Power Pages](enable-mcp-server.md)
+- [Configure redirect URIs for MCP clients](mcp-redirect-uri.md)
 - [Connect AI clients to MCP Server](mcp-connect-clients.md)
 - [Set up Microsoft Entra External ID](../security/authentication/entra-external-id.md)
 

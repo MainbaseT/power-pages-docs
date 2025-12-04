@@ -90,10 +90,10 @@ After adding your platform configurations, verify that the redirect URIs appear 
 Now that you've configured redirect URIs, you can connect AI clients to your MCP Server.
 
 > [!div class="nextstepaction"]
-> [Connect to MCP Server via Microsoft Copilot Studio](connect-mcp-copilot-studio.md)
+> [Connect to MCP Server via Microsoft Copilot Studio](mcp-connect-clients.md)
 
 ## Related content
 
 - [Enable MCP Server in Power Pages](enable-mcp-server.md)
 - [Model Context Protocol (MCP) Server for Power Pages overview](mcp-overview.md)
-- [Redirect URI (reply URL) restrictions and limitations](https://learn.microsoft.com/entra/identity-platform/reply-url)
+- [Redirect URI (reply URL) restrictions and limitations](/entra/identity-platform/reply-url)
