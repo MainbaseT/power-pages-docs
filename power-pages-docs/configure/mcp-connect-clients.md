@@ -28,11 +28,11 @@ Before you begin, ensure you have:
 
 ## Create agent in Microsoft Copilot Studio
 
-Create a new agent in Microsoft Copilot Studio that will serve as the interface betwee1. Sign in to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/).
+Create a new agent in Microsoft Copilot Studio that will serve as the interface. Sign in to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/).
 
    :::image type="content" source="media/mcp-connect-clients/image1.png" alt-text="Screenshot of the Microsoft Copilot Studio home page.":::
 
-1. In the left navigation pane, select **Create**, and then select **New agent**.te**, and then select **New agent**.
+1. In the left navigation pane, select **Create**, and then select **New agent**, and then select **New agent**.
 
    :::image type="content" source="media/mcp-connect-clients/image2.png" alt-text="Screenshot of the Create menu with New agent option highlighted.":::
 
