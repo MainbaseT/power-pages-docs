@@ -20,7 +20,7 @@ After completing these steps, users in your organization can perform CRUD operat
 Before you begin, ensure you have:
 
 - Completed the [Enable MCP Server in Power Pages](enable-mcp-server.md) configuration.
-- Completed the [Configure redirect URIs for MCP clients](mcp-redirect-url.md) setup.
+- Completed the [Configure redirect URIs for MCP clients](mcp-redirect-uri.md) setup.
 - Access to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/).
 - Permissions to create and publish agents in Microsoft Copilot Studio.
 - The third-party app registration details (Client ID, Client Secret, Authorization URL, Token URL, and Scopes).
