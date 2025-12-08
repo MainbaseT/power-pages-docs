@@ -515,9 +515,15 @@
         - name: MCP server overview
           href: configure/mcp-overview.md
         - name: Enable MCP server
-          href: configure/enable-mcp-server.md
-        - name: Configure redirect URIs for MCP clients
-          href: configure/mcp-redirect-uri.md
+          items:
+            - name: Create and configure Microsoft Entra External ID
+              href: configure/mcp-configure-entra.md
+            - name: Create and configure third party application
+              href: configure/mcp-configure-third-party-app.md
+            - name: Create and configure site settings
+              href: configure/mcp-configure-site-settings.md
+            - name: Configure redirect URIs for MCP clients
+              href: configure/mcp-redirect-uri.md
         - name: Connect to MCP server
           href: configure/mcp-connect-clients.md
     - name: Embed a Power Pages site in another website

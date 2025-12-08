@@ -19,7 +19,7 @@ After you complete these steps, your chosen AI clients can authenticate and conn
 
 Before you begin, make sure you have:
 
-- Completed the [Enable MCP Server in Power Pages](enable-mcp-server.md) configuration.
+- Completed the [Enable MCP Server in Power Pages](mcp-configure-entra.md) configuration.
 - A third-party app registration created in Microsoft Entra admin center.
 - Access to the Microsoft Entra admin center with permissions to modify app registrations.
 - Knowledge of which client types you need to support (web, single-page application, or mobile/desktop).
@@ -94,6 +94,6 @@ Now that you've configured redirect URIs, you can connect AI clients to your MCP
 
 ## Related content
 
-- [Enable MCP Server in Power Pages](enable-mcp-server.md)
+- [Enable MCP Server in Power Pages](mcp-configure-entra.md)
 - [Model Context Protocol (MCP) Server for Power Pages overview](mcp-overview.md)
 - [Redirect URI (reply URL) restrictions and limitations](/entra/identity-platform/reply-url)

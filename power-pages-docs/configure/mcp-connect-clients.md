@@ -19,8 +19,8 @@ After completing these steps, users in your organization can perform CRUD operat
 
 Before you begin, ensure you have:
 
-- Completed the [Enable MCP Server in Power Pages](enable-mcp-server.md) configuration.
-- Completed the [Configure redirect URIs for MCP clients](mcp-redirect-uri.md) setup.
+- Completed the [Enable MCP Server in Power Pages](mcp-configure-entra.md) configuration.
+- Completed the [Configure redirect URIs for MCP clients](mcp-redirect-ur.md) setup.
 - Access to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/).
 - Permissions to create and publish agents in Microsoft Copilot Studio.
 - The third-party app registration details (Client ID, Client Secret, Authorization URL, Token URL, and Scopes).
@@ -228,5 +228,5 @@ Now that you've connected AI clients to your MCP Server, explore other scenarios
 ## Related content
 
 - [Model Context Protocol (MCP) Server for Power Pages overview](mcp-overview.md)
-- [Enable MCP Server in Power Pages](enable-mcp-server.md)
+- [Enable MCP Server in Power Pages](mcp-configure-entra.md)
 - [Install an agent in Teams and Microsoft 365 Copilot](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#install-an-agent-in-teams-and-microsoft-365-copilot)

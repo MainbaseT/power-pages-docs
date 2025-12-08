@@ -16,7 +16,7 @@ The **Model Context Protocol (MCP) Server for Power Pages** lets AI agents and c
 
 ## What is MCP Server for Power Pages?
 
-**MCP Server for Power Pages** is a feature that exposes Power Pages data, APIs, and business logic through an MCP-compliant interface. It lets Large Language Models (LLMs) like ChatGPT, Claude, or Microsoft Copilot Studio perform secure CRUD (Create, Read, Update, Delete) operations on Dataverse data while respecting web roles, table permissions, and authentication boundaries.
+**MCP Server for Power Pages** is a feature that exposes Power Pages data, APIs, and business logic through an MCP-compliant interface. It lets Large Language Models (LLMs) like Microsoft 365 Copilot perform secure CRUD (Create, Read, Update, Delete) operations on Dataverse data while respecting web roles, table permissions, and authentication boundaries.
 
 As organizations increasingly use AI agents to interact with business data, the need for secure, standardized interfaces between AI systems and enterprise applications grows. The Model Context Protocol provides this standardization, letting AI assistants query and manipulate Power Pages data conversationally through any MCP-compatible AI client.
 
@@ -30,22 +30,7 @@ With MCP Server for Power Pages, makers can:
 - **Extend to AI experiences**: Enables Power Pages sites to be consumed from Microsoft Teams, ChatGPT, Claude, or any MCP-aware client
 - **Support internal workflows**: Empowers internal teams to perform portal operations without navigating the portal UI
 
-## Prerequisites
 
-Before you implement MCP Server for Power Pages:
-
-- A Power Pages site connected to a Dataverse environment.
-- Maker or admin access to the environment.
-- Access to an MCP protocol-compatible client (VS Code, Microsoft Copilot Studio).
-- The MCP Server for Power Pages feature flag enabled (Preview).
-
-
-## Next steps
-
-- [Enable MCP Server for Power Pages](enable-mcp-server.md)
-- [Configure redirect URIs for MCP clients](mcp-redirect-uri.md)
-- [Connect AI clients to MCP Server](mcp-connect-clients.md)
-- [Set up Microsoft Entra External ID](../security/authentication/entra-external-id.md)
 
 
 
