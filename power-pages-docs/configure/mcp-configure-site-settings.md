@@ -72,7 +72,7 @@ After creating all six site settings, verify that they're correctly configured:
 Now that you've configured site settings, you need to set up redirect URIs to enable AI clients to authenticate with your MCP server.
 
 > [!div class="nextstepaction"]
-> [Configure redirect URIs for MCP clients](mcp-redirect-url.md)
+> [Configure redirect URIs for MCP clients](mcp-redirect-uri.md)
 
 ## Related content
 
