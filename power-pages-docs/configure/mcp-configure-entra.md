@@ -29,8 +29,8 @@ Before you begin, ensure you have:
 
 Follow these steps to set up Microsoft Entra External ID in Power Pages and configure it to expose the MCP scope:
 
-1. [Add Microsoft Entra External ID as an identity provider.](../security/authentication/entra-external-id#step-1-add-microsoft-entra-external-id-as-an-identity-provider)
-1. [Set up Microsoft Entra External ID in the admin center.](../security/authentication/entra-external-id#step-2-set-up-microsoft-entra-external-id-in-the-admin-center)
+1. [Add Microsoft Entra External ID as an identity provider.](../security/authentication/entra-external-id.md#step-1-add-microsoft-entra-external-id-as-an-identity-provider)
+1. [Set up Microsoft Entra External ID in the admin center.](../security/authentication/entra-external-id.md#step-2-set-up-microsoft-entra-external-id-in-the-admin-center)
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/#home), select **App registrations** from the navigation pane.
 1. Select required application, select **Expose an API**, and then select **Add a scope**.
    :::image type="content" source="media/mcp-overview/entra-admin-expose-api.png" alt-text="Screenshot showing the Expose an API section with Add a scope button.":::
