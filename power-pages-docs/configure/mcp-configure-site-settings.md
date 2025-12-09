@@ -40,15 +40,9 @@ The following table lists all the site settings required to enable MCP server:
 |-------|------------------|-------|
 | Enable bearer authentication | `Authentication/BearerAuthentication/Enabled` | `True` |
 | Set authentication protocol | `Authentication/BearerAuthentication/Protocol` | `OpenIdConnect` |
-| Configure authentication provider | `Authentication/BearerAuthentication/Provider` | `OPENID_1` <br>
-> [!NOTE]
-> The provider name `OPENID_1` is used as a configuration identifier. The subsequent settings use this same identifier to group related authentication settings. |
-| Set MCP client ID | `Authentication/OpenIdConnect/OPENID_1/MCPClientId` | Your third-party app client ID <br>
-> [!NOTE]
-> You can find the client ID in the Microsoft Entra admin center under your third-party app registration's Overview page. It's labeled as "Application (client) ID". |
-| Configure MCP scope | `Authentication/OpenIdConnect/OPENID_1/MCPScope` | [Your MCP scope URI] openid profile. The value should contain three space-separated scopes, your full MCP scope URI (for example, `api://12345678-1234-1234-1234-123456789012/mcp`), `openid` and `profile` <br>
-> [!NOTE]
-> Ensure all three scopes are included and separated by single spaces. The MCP scope URI must match exactly the scope you created in your Microsoft Entra External ID app registration. |
+| Configure authentication provider | `Authentication/BearerAuthentication/Provider` | `OPENID_1` <br><br>**Note**: The provider name `OPENID_1` is used as a configuration identifier. The subsequent settings use this same identifier to group related authentication settings. |
+| Set MCP client ID | `Authentication/OpenIdConnect/OPENID_1/MCPClientId` | Your third-party app client ID <br><br>**Note**: You can find the client ID in the Microsoft Entra admin center under your third-party app registration's Overview page. It's labeled as "Application (client) ID". |
+| Configure MCP scope | `Authentication/OpenIdConnect/OPENID_1/MCPScope` | [Your MCP scope URI] openid profile. The value should contain three space-separated scopes, your full MCP scope URI (for example, `api://12345678-1234-1234-1234-123456789012/mcp`), `openid` and `profile` <br><br>**Note**: Ensure all three scopes are included and separated by single spaces. The MCP scope URI must match exactly the scope you created in your Microsoft Entra External ID app registration. |
 | Enable MCP server | MCP/Enabled | true |
 
 

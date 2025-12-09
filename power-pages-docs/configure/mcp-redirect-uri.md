@@ -70,4 +70,4 @@ After adding your platform configurations, verify that the redirect URIs appear 
 Now that you've configured redirect URIs, you can connect AI clients to your MCP Server.
 
 > [!div class="nextstepaction"]
-> [Connect to MCP Server via Microsoft Copilot Studio](mcp-connect-clients.md)
+> [Connect to MCP Server via Microsoft 365 Copilot](mcp-connect-clients.md)
