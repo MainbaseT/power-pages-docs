@@ -31,12 +31,12 @@ Before you begin, ensure you have:
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/#home), go to **App registrations**, select **All applications**, and locate the application you created.
 1. Select **API permissions**, and then select **Add a permission**.
 1. On the **Request API permissions** tab, select **APIs my organization uses**, search for the Microsoft Entra External ID app you created earlier, and select it.
-   :::image type="content" source="media/enable-mcp-server/image12.png" alt-text="Screenshot of the API selection showing the search results for the organization's APIs.":::
+   :::image type="content" source="media/mcp-overview/api-search.png" alt-text="Screenshot of the API selection showing the search results for the organization's APIs.":::
 1. Select the checkbox next to **MCP** and select **Add permissions**.
 1. Select **API permissions** again, then select **Add a permission**. This time, select **Microsoft APIs** and then select **Microsoft Graph**.
-   :::image type="content" source="media/enable-mcp-server/image14.png" alt-text="Screenshot of Request API permissions panel showing Microsoft APIs tab with Microsoft Graph option.":::
+   :::image type="content" source="media/mcp-overview/api-graph.png" alt-text="Screenshot of Request API permissions panel showing Microsoft APIs tab with Microsoft Graph option.":::
 1. Select **Delegated permissions**, select the checkboxes next to **openid** and **profile**, and then select **Add permissions**.
-   :::image type="content" source="media/enable-mcp-server/image15.png" alt-text="Screenshot showing delegated permissions selection with openid and profile permissions selected.":::
+   :::image type="content" source="media/mcp-overview/delegated-permissions.png" alt-text="Screenshot showing delegated permissions selection with openid and profile permissions selected.":::
 1. Select **Grant admin consent for [your tenant]**, and then select **Yes** to finish the permissions setup.
 
 ## Next steps

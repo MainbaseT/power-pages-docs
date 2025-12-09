@@ -41,12 +41,12 @@ Configure the Model Context Protocol tool to connect your agent to the Power Pag
 
 1. In the agent configuration, select **Tools**, and then select **Add a tool**.
 1. In the search bar, enter `Model Context Protocol`, select **Model Context Protocol** from the results, and then select **New tool**.
-   :::image type="content" source="media/mcp-connect-clients/image5.png" alt-text="Screenshot of the tool selection dialog with Model Context Protocol in the search results.":::
+   :::image type="content" source="media/mcp-overview/tool-selection-search.png" alt-text="Screenshot of the tool selection dialog with Model Context Protocol in the search results.":::
 1. Select **Model Context Protocol** again and enter the MCP server details:
    - **Server Name**: Enter a descriptive name for your server
    - **Server Description**: Enter a description of what the server provides
    - **Server URL**: Enter your Power Pages MCP Server endpoint URL
-    :::image type="content" source="media/mcp-connect-clients/image6.png" alt-text="Screenshot showing the Model Context Protocol tool selection.":::
+
 
 ### Configure OAuth authentication
 
@@ -87,7 +87,7 @@ Make the agent available to users by publishing it and configuring channels.
 1. On the agent configuration screen, select **Publish**.
 1. Select the menu button (three dots) at the top right of the page, and then select **Share**.
 1. Select the users or groups that should have access to this agent, assign the **Viewer** role so they can chat with the agent, and then select **Update**.
-    :::image type="content" source="media/mcp-connect-clients/image20.png" alt-text="Screenshot of the Share dialog showing user and group access configuration.":::
+    :::image type="content" source="media/mcp-overview/share-dialog.png" alt-text="Screenshot of the Share dialog showing user and group access configuration.":::
 
 > [!TIP]
 > Before making an agent available to users, provide a clear description and appropriate branding to help users understand the agent's purpose.
@@ -100,7 +100,7 @@ Configure the agent to be available in Microsoft Teams and Microsoft 365 Copilot
 1. In the pane that appears, select **Add channel**.
 1. After the channel is added, you'll see links to access the agent in Teams and Microsoft 365 Copilot.
 
-   :::image type="content" source="media/mcp-connect-clients/image24.png" alt-text="Screenshot showing the successful channel addition with access links.":::
+   :::image type="content" source="media/mcp-overview/channel-added.png" alt-text="Screenshot showing the successful channel addition with access links.":::
 
 > [!NOTE]
 > For detailed guidance on creating channels and configuring permissions, see [Connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams).
@@ -130,7 +130,7 @@ First-time users need to establish a connection through the Connection Manager.
 1. When prompted, select the **Open Connection Manager** link.
 1. In the Connection Manager window, select **Connect**.
 1. Select the menu button (three dots) and select **Add new connection**.
-   :::image type="content" source="media/mcp-connect-clients/image29.png" alt-text="Screenshot showing the options menu with Add new connection option.":::
+   :::image type="content" source="media/mcp-overview/new-connection.png" alt-text="Screenshot showing the options menu with Add new connection option.":::
 1. Enter your credentials and select **Sign in**. After signing in, select **Submit**.
 1. After the connection is established, a confirmation message appears.
 1. Return to the chat window and select **Retry** to resubmit your query.

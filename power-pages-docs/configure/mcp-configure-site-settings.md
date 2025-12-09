@@ -34,9 +34,6 @@ Navigate to the site settings configuration area in Portal Management.
 
 Create six site settings to enable and configure MCP server functionality. For each setting, select **New** to create a new site setting record.
 
-:::image type="content" source="media/enable-mcp-server/image19.png" alt-text="Screenshot showing the New button to create a new site setting.":::
-
-
 The following table lists all the site settings required to enable MCP server:
 
 | Site setting |  Name | Value |
