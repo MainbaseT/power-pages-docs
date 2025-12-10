@@ -1,6 +1,6 @@
 ---
-title: Secure AI Integration with MCP Server on Power Pages
-description: Enable secure AI interactions with your Power Pages data using the Model Context Protocol (MCP) Server. Learn how to expose APIs, manage permissions, and more.
+title: Connect to Power Pages MCP server
+description: Connect securely to Power Pages Model Context Protocol (MCP) Server. Learn how to expose APIs, manage permissions, and more.
 #customer intent: As a Power Pages maker, I want to enable the MCP Server so that AI agents can securely interact with my portal data and APIs
 author: shwetamurkute
 ms.author: smurkute
@@ -24,12 +24,16 @@ As organizations increasingly use AI agents to interact with business data, the 
 
 With MCP Server for Power Pages, makers can:
 
-- **Expose Power Pages resources**: Makes data, APIs, and business logic available through an MCP-compliant interface
-- **Enable secure CRUD operations**: Allows AI agents to create, read, update, and delete Dataverse records
-- **Maintain security controls**: Keeps full control through web roles, table permissions, and authentication boundaries
-- **Extend to AI experiences**: Enables Power Pages sites to be consumed from Microsoft Teams, ChatGPT, Claude, or any MCP-aware client
-- **Support internal workflows**: Empowers internal teams to perform portal operations without navigating the portal UI
+- **Expose Power Pages resources**: Makes data, APIs, and business logic available through an MCP-compliant interface.
+- **Enable secure CRUD operations**: Allows AI agents to create, read, update, and delete Dataverse records.
+- **Maintain security controls**: Keeps full control through web roles, table permissions, and authentication boundaries.
+- **Extend to AI experiences**: Enables Power Pages sites to be consumed from Microsoft 365 Copilot.
+- **Support internal workflows**: Empowers internal teams to perform portal operations without navigating the portal UI.
 
+## Related articles
+
+- [Enable Power Pages MCP server](mcp-configure-entra.md)   
+- [Connect to MCP server via Microsoft 365 Copilot](mcp-connect-clients.md)
 
 
 

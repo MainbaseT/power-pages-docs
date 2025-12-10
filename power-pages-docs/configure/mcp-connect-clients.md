@@ -1,5 +1,5 @@
 ---
-title: Setup and connect MCP Server through AI chat clients
+title: Setup and connect to MCP Server via Microsoft 365 Copilot
 description: Learn how to connect AI chat clients to your MCP Server for seamless Power Pages data interaction. Follow step-by-step instructions for setup and integration.
 #customer intent: As a developer, I want to set up and publish an agent in Microsoft 365 Copilot.
 author: shwetamurkute
@@ -13,7 +13,7 @@ ms.topic: how-to
 
 This article shows you how to create and configure an agent in Microsoft 365 Copilot that connects to your Power Pages MCP Server, and how end users can interact with your Power Pages data through conversational AI.
 
-After completing these steps, users in your organization can perform CRUD operations on Power Pages data through natural language conversations in Microsoft 365 Copilot or Teams.
+After completing these steps, users in your organization can perform CRUD operations on Power Pages data through natural language conversations in Microsoft 365 Copilot.
 
 ## Prerequisites
 
@@ -94,18 +94,18 @@ Make the agent available to users by publishing it and configuring channels.
 
 ### Add channels
 
-Configure the agent to be available in Microsoft Teams and Microsoft 365 Copilot.
+Configure the agent to be available in Microsoft 365 Copilot.
 
 1. Select **Channels** and select **Teams and Microsoft 365 Copilot**.
 1. In the pane that appears, select **Add channel**.
-1. After the channel is added, you'll see links to access the agent in Teams and Microsoft 365 Copilot.
+1. After the channel is added, you'll see links to access the agent in Microsoft 365 Copilot.
 
    :::image type="content" source="media/mcp-overview/channel-added.png" alt-text="Screenshot showing the successful channel addition with access links.":::
 
 > [!NOTE]
 > For detailed guidance on creating channels and configuring permissions, see [Connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams).
 
-## Connect end-users via Microsoft 365 Copilot and Microsoft Teams  
+## Connect end-users via Microsoft 365 Copilot  
 
 After the agent is published, end users can add it to Microsoft 365 Copilot and interact with Power Pages data through natural language.
 
@@ -114,7 +114,7 @@ After the agent is published, end users can add it to Microsoft 365 Copilot and 
 - Membership in the organization or group that has access to the agent.
 - A valid Microsoft 365 Copilot license.
 
-### Add agent in Microsoft 365 Copilot and per form operations
+### Add agent in Microsoft 365 Copilot and perform operations
 
 1. Sign in to [Microsoft 365 Copilot](https://copilot.cloud.microsoft/) with your credentials.
 1. Add the agent from the left pane. The agent appears in the left pane and the chat interface will open on the right.
@@ -141,5 +141,6 @@ First-time users need to establish a connection through the Connection Manager.
 
 ## Related content
 
-- [Connect to Dataverse with Model Context Protocol](/power-apps/maker/data-platform/data-platform-mcp)
-- [Install an agent in Teams and Microsoft 365 Copilot](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#install-an-agent-in-teams-and-microsoft-365-copilot)
+- [Connect to Power Pages MCP server](mcp-overview.md)   
+- [Enable Power Pages MCP server](mcp-configure-entra.md)   
+- [Connect to Dataverse with Model Context Protocol](/power-apps/maker/data-platform/data-platform-mcp)  

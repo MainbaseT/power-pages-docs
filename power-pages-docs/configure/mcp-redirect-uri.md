@@ -29,7 +29,7 @@ Configure the authentication platform for your third-party app registration to s
 
 1. Go to the [Microsoft Entra admin center](https://entra.microsoft.com/#home).
 1. Select **App registrations** and then locate the third-party app you created.
-1. Select **Authentication**, and then select **Add a platform**.
+1. Select **Authentication**, and then select **Add Redirect URI**.
 
 ## Configure redirect URI for web applications
 

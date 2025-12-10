@@ -33,11 +33,11 @@ Follow these steps to set up Microsoft Entra External ID in Power Pages and conf
 1. [Set up Microsoft Entra External ID in the admin center.](../security/authentication/entra-external-id.md#step-2-set-up-microsoft-entra-external-id-in-the-admin-center)
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/#home), select **App registrations** from the navigation pane.
 1. Select required application, select **Expose an API**, and then select **Add a scope**.
-   :::image type="content" source="media/mcp-overview/entra-admin-expose-api.png" alt-text="Screenshot showing the Expose an API section with Add a scope button.":::
-1. Append `/mcp` in the field **Scope name** and enter the following information for the rest of the fields:
+   :::image type="content" source="media/mcp-overview/entra-admin-expose-api.png" alt-text="Screenshot showing the Expose an API section with Add a scope button." lightbox="media/mcp-overview/entra-admin-expose-api.png":::
+1. In the **Scope name** field, enter `mcp` and configure the following settings:
    - **Who can consent**: Select **Admins and users**.
-   - **Admin consent display name**: Enter `MCP`
-   - **Admin consent description**: Enter `MCP`
+   - **Admin consent display name**: Enter an appropriate display name.
+   - **Admin consent description**: Enter an appropriate description.
    - Select **Add scope** to complete.
 
    :::image type="content" source="media/mcp-overview/entra-admin-add-scope.png" alt-text="Screenshot of the scope configuration showing the MCP scope details with consent settings.":::

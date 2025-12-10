@@ -64,9 +64,3 @@ Now that you've configured site settings, you need to set up redirect URIs to en
 
 > [!div class="nextstepaction"]
 > [Configure redirect URIs for MCP clients](mcp-redirect-uri.md)
-
-## Related content
-
-- [Model Context Protocol (MCP) Server for Power Pages overview](mcp-overview.md)
-- [Configure Microsoft Entra External ID for MCP Server](mcp-configure-entra.md)
-- [Connect to MCP Server via Microsoft Copilot Studio](mcp-connect-clients.md)
