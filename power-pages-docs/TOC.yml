@@ -510,7 +510,7 @@
       href: configure/advanced-config.md
 - name: Integrate Power Pages
   items:
-    - name: Work with MCP server on Power Pages (preview)
+    - name: Work with Power Pages MCP server (preview)
       items:
         - name: MCP server overview
           href: configure/mcp-overview.md
