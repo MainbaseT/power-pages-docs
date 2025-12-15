@@ -40,7 +40,7 @@ Follow these steps to set up Microsoft Entra External ID in Power Pages and conf
    - **Admin consent description**: Enter an appropriate description.
    - Select **Add scope** to complete.
 
-   :::image type="content" source="media/mcp-overview/entra-admin-add-scope.png" alt-text="Screenshot of the scope configuration showing the MCP scope details with consent settings." lightbox="media/mcp-overview/entra-admin-add-scope.png":::
+   :::image type="content" source="media/mcp-overview/entra-admin-add-scope.png" alt-text="Screenshot of the scope configuration showing the MCP scope details with consent settings." width="350" height="416" lightbox="media/mcp-overview/entra-admin-add-scope.png":::
 
 ## Next steps
 
