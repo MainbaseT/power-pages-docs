@@ -35,7 +35,7 @@ Before you begin, ensure that you have:
 1. Select the checkbox next to **MCP** and select **Add permissions**.
     :::image type="content" source="media/mcp-overview/select-permission.png" alt-text="Screenshot of the request API permissions with mcp checkbox selected." lightbox="media/mcp-overview/select-permission.png":::
 1. From the left navigation, select **API permissions** again, and then select **Add a permission**. 
-1. This time, select **Microsoft APIs** and then select **Microsoft Graph**.
+1. Select **Microsoft APIs** and then select **Microsoft Graph**.
    :::image type="content" source="media/mcp-overview/api-graph.png" alt-text="Screenshot of Request API permissions panel showing Microsoft APIs tab with Microsoft Graph option.":::
 1. Select **Delegated permissions**, select the checkboxes next to **openid** and **profile**, and then select **Add permissions**.
     :::image type="content" source="media/mcp-overview/delegated-permissions.png" alt-text="Screenshot showing delegated permissions selection with openid and profile permissions selected." lightbox="media/mcp-overview/delegated-permissions.png":::

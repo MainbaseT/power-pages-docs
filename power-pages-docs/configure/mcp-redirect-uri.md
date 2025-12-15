@@ -48,7 +48,7 @@ Use this configuration to test MCP Server connections from localhost.
 1. Select **Configure**.
 
 > [!NOTE]
-> This configuration is primarily for testing and development purposes. For production scenarios, use web or mobile/desktop platform configurations.
+> This configuration is primarily for testing and development purposes. For production scenarios, use web, mobile or desktop platform configurations.
 
 ## Configure redirect URI for mobile and desktop applications
 
