@@ -19,10 +19,10 @@ This article shows you how to set up Microsoft Entra External ID as an identity 
 
 Before you begin, ensure you have:
 
-- A functional Power Pages site.
-- Maker or admin access to the Power Pages environment.
-- Access to an MCP protocol-compatible client (VS Code, Microsoft Copilot Studio).
-- Access to the Microsoft Entra admin center with permissions to create app registrations.
+- A functional Power Pages site
+- Maker or admin access to the Power Pages environment
+- Access to an MCP protocol-compatible client (VS Code, Microsoft Copilot Studio)
+- Access to the Microsoft Entra admin center with permissions to create app registrations
 
 
 ## Configure Microsoft Entra External ID

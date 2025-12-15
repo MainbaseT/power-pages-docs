@@ -11,7 +11,7 @@ ms.topic: how-to
 
 # Configure redirect URIs for MCP clients
 
-This article shows you how to configure redirect URIs in your third-party app registration to enable different types of AI clients to connect to your MCP Server. Redirect URIs specify where the Microsoft identity platform sends security tokens after authentication. Redirect URIs are configured in platform configurations in the Microsoft Entra admin center. For web and single-page applications, you need to specify a redirect URI manually. For mobile and desktop platforms, you select from generated redirect URIs. Learn more in, [Add a redirect URI to your application](/entra/identity-platform/how-to-add-redirect-uri).
+This article shows you how to configure redirect URIs in your third-party app registration to enable different types of AI clients to connect to your MCP Server. Redirect URIs specify where the Microsoft identity platform sends security tokens after authentication. Redirect URIs are configured in platform configurations in the Microsoft Entra admin center. For web and single-page applications, you need to specify a redirect URI manually. For mobile and desktop platforms, you select from generated redirect URIs. Learn more in [Add a redirect URI to your application](/entra/identity-platform/how-to-add-redirect-uri).
 
 After you complete the following steps, your chosen AI clients can authenticate and connect to your Power Pages MCP server.
 
@@ -19,9 +19,9 @@ After you complete the following steps, your chosen AI clients can authenticate 
 
 Before you begin, make sure you have:
 
-- Completed the [Create and configure third party app registration](mcp-configure-third-party-app.md).
-- Access to the Microsoft Entra admin center with permissions to modify app registrations.
-- Knowledge of which client types you need to support (web, single-page application, or mobile/desktop).
+- Completed the [Create and configure third party app registration](mcp-configure-third-party-app.md)
+- Access to the Microsoft Entra admin center with permissions to modify app registrations
+- Knowledge of which client types you need to support (web, single-page application, or mobile/desktop)
 
 ## Add platform configuration
 

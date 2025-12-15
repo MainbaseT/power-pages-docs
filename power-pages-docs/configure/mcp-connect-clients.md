@@ -19,9 +19,9 @@ After completing these steps, users in your organization can perform CRUD operat
 
 Before you begin, ensure you have:
 
-- Completed the [Configure redirect URIs for MCP clients](mcp-redirect-uri.md) setup.
-- The third-party app registration details (Client ID, Client Secret, Authorization URL, Token URL, and Scopes).
-- Microsoft 365 Copilot license for end users who use the agent.
+- Completed the [Configure redirect URIs for MCP clients](mcp-redirect-uri.md) setup
+- The third-party app registration details (Client ID, Client Secret, Authorization URL, Token URL, and Scopes)
+- Microsoft 365 Copilot license for end users who use the agent
 
 ## Create and configure agent in Microsoft Copilot Studio
 
@@ -33,7 +33,7 @@ Create a new agent in Microsoft Copilot Studio that will serve as the interface.
 1. Sign in to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/).
 1. In the left navigation pane, select **Create**, and then select **New agent**. 
 
-This will create a new agent that we will publish later to M365 Copilot.  
+This will create a new agent that we will publish later to Microsoft 365 Copilot.  
 
 ### Add MCP tool to agent
 
@@ -87,7 +87,8 @@ Make the agent available to users by publishing it and configuring channels.
 1. On the agent configuration screen, select **Publish**.
 1. Select the menu button (three dots) at the top right of the page, and then select **Share**.
 1. Select the users or groups that should have access to this agent, assign the **Viewer** role so they can chat with the agent, and then select **Update**.
-    :::image type="content" source="media/mcp-overview/share-dialog.png" alt-text="Screenshot of the Share dialog showing user and group access configuration.":::
+
+:::image type="content" source="media/mcp-overview/share-dialog.png" alt-text="Screenshot of the Share dialog showing user and group access configuration.":::
 
 > [!TIP]
 > Before making an agent available to users, provide a clear description and appropriate branding to help users understand the agent's purpose.
@@ -105,14 +106,14 @@ Configure the agent to be available in Microsoft 365 Copilot.
 > [!NOTE]
 > For detailed guidance on creating channels and configuring permissions, see [Connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams).
 
-## Connect end-users via Microsoft 365 Copilot  
+## Connect via Microsoft 365 Copilot  
 
 After the agent is published, end users can add it to Microsoft 365 Copilot and interact with Power Pages data through natural language.
 
-### Prerequisites for end users
+### Prerequisites
 
-- Membership in the organization or group that has access to the agent.
-- A valid Microsoft 365 Copilot license.
+- Membership in the organization or group that has access to the agent
+- A valid Microsoft 365 Copilot license
 
 ### Add agent in Microsoft 365 Copilot and perform operations
 
