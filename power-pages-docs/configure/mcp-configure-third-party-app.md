@@ -30,7 +30,7 @@ Before you begin, ensure that you have:
 1. Add your application to the user flow by following the steps in [add your application to the user flow](../security/authentication/entra-external-id.md#add-your-application-to-the-user-flow).
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/#home), go to **App registrations**, select **All applications**, and locate the application you created.
 1. Select **API permissions**, and then select **Add a permission**.
-1. On the **Request API permissions** tab, select **APIs my organization uses**, search for the Microsoft Entra External ID app you created earlier, and select it.
+1. On the **Request API permissions** tab, select **APIs my organization uses**, search for the name of the Microsoft Entra External ID app that you created earlier, and select it.
    :::image type="content" source="media/mcp-overview/api-search.png" alt-text="Screenshot of the API selection showing the search results for the organization's APIs.":::
 1. Select the checkbox next to **MCP** and select **Add permissions**.
     :::image type="content" source="media/mcp-overview/select-permission.png" alt-text="Screenshot of the request API permissions with mcp checkbox selected." lightbox="media/mcp-overview/select-permission.png":::
