@@ -3,7 +3,7 @@ title: Configure third party app registration in Microsoft Entra
 description: Learn how to create and configure third party app registrations in Microsoft Entra. Follow step-by-step instructions to set up user flows and API permissions.
 #customer intent: As an IT admin, I want to register a third-party app in Microsoft Entra so that I can enable secure authentication for external users.
 author: shwetamurkute
-ms.author: smurkute
+ms.author: vipingulati
 ms.reviewer: smurkute
 ms.date: 12/08/2025
 ms.topic: how-to

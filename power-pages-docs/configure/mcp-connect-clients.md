@@ -3,7 +3,7 @@ title: Setup and connect to MCP Server via Microsoft 365 Copilot
 description: Learn how to connect AI chat clients to your MCP Server for seamless Power Pages data interaction. Follow step-by-step instructions for setup and integration.
 #customer intent: As a developer, I want to set up and publish an agent in Microsoft 365 Copilot.
 author: shwetamurkute
-ms.author: smurkute
+ms.author: vipingulati
 ms.reviewer: smurkute
 ms.date: 12/04/2025
 ms.topic: how-to

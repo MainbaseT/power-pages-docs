@@ -3,7 +3,7 @@ title: Configure redirect URI for MCP server access
 description: Learn how to configure redirect URIs for connecting to the MCP server across web, single-page, mobile, and desktop applications in Microsoft Entra.
 #customer intent: As a developer, I want to configure a redirect URI for a web application so that I can enable secure authentication with the MCP server.
 author: shwetamurkute
-ms.author: smurkute
+ms.author: vipingulati
 ms.reviewer: smurkute
 ms.date: 12/04/2025
 ms.topic: how-to

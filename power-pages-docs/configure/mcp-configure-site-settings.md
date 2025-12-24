@@ -3,7 +3,7 @@ title: Configure site settings for MCP server in Power Pages
 description: Learn how to configure site settings in Power Pages to enable MCP Server functionality, including bearer authentication, protocols, and client ID setup.
 #customer intent: As a Power Pages admin, I want to configure site settings to enable MCP server functionality so that I can integrate AI clients with my site.
 author: shwetamurkute
-ms.author: smurkute
+ms.author: vipingulati
 ms.reviewer: smurkute
 ms.date: 12/08/2025
 ms.topic: how-to

@@ -3,7 +3,7 @@ title: Connect to Power Pages MCP server
 description: Connect securely to Power Pages Model Context Protocol (MCP) Server. Learn how to expose APIs, manage permissions, and more.
 #customer intent: As a Power Pages maker, I want to enable the MCP Server so that AI agents can securely interact with my portal data and APIs
 author: shwetamurkute
-ms.author: smurkute
+ms.author: vipingulati
 ms.reviewer: smurkute
 ms.date: 12/04/2025
 ms.topic: concept-article

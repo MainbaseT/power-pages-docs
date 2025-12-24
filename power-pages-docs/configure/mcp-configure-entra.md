@@ -3,7 +3,7 @@ title: Create and configure Microsoft Entra External ID in Power Pages
 description: Learn how to configure Microsoft Entra External ID for your Power Pages site. Follow step-by-step instructions to set up identity providers and API scopes.
 #customer intent: As a Power Pages admin, I want to configure Microsoft Entra External ID as an identity provider so that users can securely authenticate on my site.
 author: shwetamurkute
-ms.author: smurkute
+ms.author: vipingulati
 ms.reviewer: smurkute
 ms.date: 12/08/2025
 ms.topic: how-to
