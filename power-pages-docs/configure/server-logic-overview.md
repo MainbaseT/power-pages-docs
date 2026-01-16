@@ -2,10 +2,10 @@
 title: Power Pages server logic overview (preview)
 description: Learn how to configure and secure Power Pages server logic, including governance settings, API authentication, and site-specific configurations.
 #customer intent: As a developer, I want to securely run JavaScript on the server so that I can extend site functionality without exposing code in the browser.
-author: shwetamurkute
+author: nageshbhat-msft
 ms.author: nabha
 ms.reviewer: smurkute
-ms.date: 11/12/2025
+ms.date: 01/05/2026
 ms.topic: concept-article
 ---
 
