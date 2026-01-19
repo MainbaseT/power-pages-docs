@@ -5,7 +5,7 @@ description: Learn how to create and configure third party app registrations in 
 author: shwetamurkute
 ms.author: vipingulati
 ms.reviewer: smurkute
-ms.date: 12/08/2025
+ms.date: 01/19/2026
 ms.topic: how-to
 ---
 
@@ -23,11 +23,24 @@ Before you begin, ensure that you have:
 
 ## Configure the third-party app
 
+### [Microsoft Entra ID](#tab/entra-id)
+
+1. Sign in to [Microsoft Entra admin center](https://entra.microsoft.com/#home).
+1. Select **Overview**, and then select **Manage Tenants**.
+1. Select the tenant in which you created your portal, and then select **Switch** to switch to that tenant.
+1. Select **App Registration**, and then select **New Registration**.
+1. Enter a friendly name for your application (for example, MCP-Demo-Testing), and then select **Register**.
+
+### [Microsoft Entra External ID](#tab/entra-external-id)    
+
 1. Sign in to [Microsoft Entra admin center](https://entra.microsoft.com/#home).
 1. Select **App registrations**, and then select **New registration**.
 1. Enter a name for your application and then select **Register**.
 1. Create a user flow by following the steps in [create a user flow](../security/authentication/entra-external-id.md#create-a-user-flow).
 1. Add your application to the user flow by following the steps in [add your application to the user flow](../security/authentication/entra-external-id.md#add-your-application-to-the-user-flow).
+
+---
+
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/#home), go to **App registrations**, select **All applications**, and locate the application you created.
 1. Select **API permissions**, and then select **Add a permission**.
 1. On the **Request API permissions** tab, select **APIs my organization uses**, search for the name of the Microsoft Entra External ID app that you created earlier, and select it.

@@ -10,7 +10,7 @@ ms.collection: bap-ai-copilot
 ---
 
 
-# Create and configure Microsoft Entra ID or Entra External ID
+# Create and configure Microsoft Entra ID or Microsoft Entra External ID
 
 This article shows you how to set up Microsoft Entra ID or Microsoft Entra External ID as an identity provider for your Power Pages site and configure it to expose the MCP scope. This is the first step for implementing MCP server in Power Pages.
 
@@ -25,7 +25,7 @@ Before you begin, ensure you have:
 - A functional Power Pages site
 - Maker or admin access to the Power Pages environment
 - Access to an MCP protocol-compatible client (VS Code, Microsoft Copilot Studio)
-- Access to the Microsoft Entra admin center with permissions to create app registrations for configuring Microsoft Entra ID
+- Access to the Microsoft Entra admin center with permissions to create app registrations
 
 
 ## Configure identity provider
