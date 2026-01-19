@@ -41,18 +41,18 @@ Before you begin, ensure that you have:
 
 ---
 
-1. In the [Microsoft Entra admin center](https://entra.microsoft.com/#home), go to **App registrations**, select **All applications**, and locate the application you created.
-1. Select **API permissions**, and then select **Add a permission**.
-1. On the **Request API permissions** tab, select **APIs my organization uses**, search for the name of the Microsoft Entra External ID app that you created earlier, and select it.
+6. In the [Microsoft Entra admin center](https://entra.microsoft.com/#home), go to **App registrations**, select **All applications**, and locate the application you created.
+7. Select **API permissions**, and then select **Add a permission**.
+8. On the **Request API permissions** tab, select **APIs my organization uses**, search for the name of the Microsoft Entra External ID app that you created earlier, and select it.
    :::image type="content" source="media/mcp-overview/api-search.png" alt-text="Screenshot of the API selection showing the search results for the organization's APIs.":::
-1. Select the checkbox next to **MCP** and select **Add permissions**.
+9. Select the checkbox next to **MCP** and select **Add permissions**.
     :::image type="content" source="media/mcp-overview/select-permission.png" alt-text="Screenshot of the request API permissions with mcp checkbox selected.":::
-1. From the left navigation, select **API permissions** again, and then select **Add a permission**. 
-1. Select **Microsoft APIs** and then select **Microsoft Graph**.
+10. From the left navigation, select **API permissions** again, and then select **Add a permission**. 
+11. Select **Microsoft APIs** and then select **Microsoft Graph**.
    :::image type="content" source="media/mcp-overview/api-graph.png" alt-text="Screenshot of Request API permissions panel showing Microsoft APIs tab with Microsoft Graph option.":::
-1. Select **Delegated permissions**, select the checkboxes next to **openid** and **profile**, and then select **Add permissions**.
+12. Select **Delegated permissions**, select the checkboxes next to **openid** and **profile**, and then select **Add permissions**.
     :::image type="content" source="media/mcp-overview/delegated-permissions.png" alt-text="Screenshot showing delegated permissions selection with openid and profile permissions selected.":::
-1. Select **Grant admin consent for [your tenant]**, and then select **Yes** to finish the permissions setup.
+13. Select **Grant admin consent for [your tenant]**, and then select **Yes** to finish the permissions setup.
 
 ## Next steps
 
