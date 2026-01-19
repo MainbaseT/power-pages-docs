@@ -516,7 +516,7 @@
           href: configure/mcp-overview.md
         - name: Enable MCP server
           items:
-            - name: Create and configure Microsoft Entra External ID
+            - name: Create and configure Microsoft Entra ID or Entra External ID
               href: configure/mcp-configure-entra.md
             - name: Create and configure third party application
               href: configure/mcp-configure-third-party-app.md
