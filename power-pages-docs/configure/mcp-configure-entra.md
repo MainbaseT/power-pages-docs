@@ -36,7 +36,7 @@ Choose the identity provider you want to configure for your Power Pages site:
 
 Follow these steps to set up Microsoft Entra ID in Power Pages and configure it to expose the MCP scope:
 
-1. Go to Power Pages design studio and create your portal or site.
+1. Go to [Power Pages design studio](https://make.powerpages.microsoft.com) and create your portal or site.
 1. Once you create the site, find the application ID of the portal under **Site Details** and copy it.
 1. Go to the [Azure Portal](https://portal.azure.com), open **App Registrations**, find your application by using the app ID you copied in the previous step, and select it.
 1. On the overview page of the application, expand **Manage**, select **Expose an API**, and then select **Add a scope**.
