@@ -5,7 +5,7 @@ description: Learn how to configure redirect URIs for connecting to the MCP serv
 author: shwetamurkute
 ms.author: vipingulati
 ms.reviewer: smurkute
-ms.date: 12/04/2025
+ms.date: 01/28/2026
 ms.topic: how-to
 ---
 
@@ -33,10 +33,10 @@ Configure the authentication platform for your third-party app registration to s
 
 ## Configure redirect URI for web applications
 
-Use this configuration to access MCP server via apps such as Claude, ChatGPT, or Whatsapp. 
+Use this configuration to access MCP server via apps such as Microsoft 365.
 
 1. Select **Web** from the platform options.
-1. Enter the redirect URL for your AI client application. For example, for Claude, use: `https://claude.ai/api/mcp/auth_callback`.
+1. Enter the redirect URL for your AI client application.
 1. Select **Configure**.
 
 ## Configure redirect URI for single-page applications

@@ -5,7 +5,7 @@ description: Learn how to connect AI chat clients to your MCP Server for seamles
 author: shwetamurkute
 ms.author: vipingulati
 ms.reviewer: smurkute
-ms.date: 12/04/2025
+ms.date: 01/28/2026
 ms.topic: how-to
 ---
 
@@ -77,8 +77,13 @@ Establish a connection that allows the agent to authenticate with your MCP Serve
 1. Return to Microsoft Copilot Studio and select **Next**.
 1. Select the **Connection** dropdown and select **Create new connection**.
 1. Select **Create**. A sign-in window appears.
-1. Enter your credentials and select **Sign in**.
+1. Enter your maker credentials, and then select **Sign in**.
 1. After signing in, select **Add and configure**.
+
+### Verify MCP server in the Tools section
+
+Check your MCP server details in the **Tools** section of the agent you created.
+
 
 ### Publish agent
 

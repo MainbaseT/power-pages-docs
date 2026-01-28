@@ -5,7 +5,7 @@ description: Learn how to configure site settings in Power Pages to enable MCP S
 author: shwetamurkute
 ms.author: vipingulati
 ms.reviewer: smurkute
-ms.date: 01/20/2026
+ms.date: 01/28/2026
 ms.topic: how-to
 ---
 
@@ -40,29 +40,29 @@ The following sections provide the site settings required based on your identity
 
 The following table lists all the site settings required to enable MCP server with Microsoft Entra ID:
 
-| Site setting | Name | Value |
-|-------|------------------|-------|
-| Enable bearer authentication | `Authentication/BearerAuthentication/Enabled` | `True` |
-| Set authentication protocol | `Authentication/BearerAuthentication/Protocol` | `OpenIdConnect` |
-| Configure authentication provider | `Authentication/BearerAuthentication/Provider` | `AzureAD` |
-| Use Microsoft Entra V2 Issuer | `Authentication/BearerAuthentication/UseEntraV2Issuer` | `True` <br><br>**Note**: Keep the source as **Table**|
-| Set valid issuers | `Authentication/BearerAuthentication/ValidIssuers` | Your issuer URI <br><br>**Note**: To find your issuer URI: <br>1. Go to your app registration **Overview** page in the Microsoft Entra admin center. <br>2. Select **Endpoints**. <br>3. Copy the value under **OpenID Connect metadata document**. <br>4. Open the URL in a browser and locate the **issuer** field. <br>5. Copy the issuer value. |
-| Set MCP client ID | `Authentication/OpenIdConnect/AzureAD/MCPClientId` | Your third-party app client ID <br><br>**Note**: You can find the client ID in the Microsoft Entra admin center under your third-party app registration's **Overview** page. It's labeled as "Application (client) ID". |
-| Configure MCP scope | `Authentication/OpenIdConnect/AzureAD/MCPScope` | [Your MCP scope URI] openid profile. The value should contain three space-separated scopes: your full MCP scope URI (for example, `api://00000000-0000-0000-0000-000000000000/mcp`), `openid`, and `profile` <br><br>**Note**: Ensure all three scopes are included and separated by single spaces. The MCP scope URI must match exactly the scope you created in your Microsoft Entra ID app registration. |
-| Enable MCP server | `MCP/Enabled` | `true` |
+| Site setting | Name | Value | Description |
+|-------|------------------|-------|----------|
+| Enable bearer authentication | `Authentication/BearerAuthentication/Enabled` | `True` | Enables bearer token authentication, which lets Power Pages securely pass the authenticated user's token (such as an ID token) to external APIs for API-level authorization. |
+| Set authentication protocol | `Authentication/BearerAuthentication/Protocol` | `OpenIdConnect` | This setting specifies the protocol type—most commonly OpenIdConnect—used by the backend to validate tokens passed in the `Authorization: Bearer <token>` HTTP header. |
+| Configure authentication provider | `Authentication/BearerAuthentication/Provider` | `AzureAD` | This setting lets administrators define which specific authentication provider (for example, Azure AD B2C or another OpenID Connect compatible service) the Power Pages site uses to validate bearer tokens presented during requests to the site. |
+| Use Microsoft Entra V2 Issuer | `Authentication/BearerAuthentication/UseEntraV2Issuer` | `True` <br><br>**Note**: Keep the source as **Table**|This site setting configures how bearer tokens are validated, specifically directing the system to use the Microsoft Entra V2.0 endpoint (v2.0 authority) for authentication token issuance and validation. |
+| Set valid issuers | `Authentication/BearerAuthentication/ValidIssuers` | Your issuer URI <br><br>**Note**: To find your issuer URI: <br>1. Go to your app registration **Overview** page in the Microsoft Entra admin center. <br>2. Select **Endpoints**. <br>3. Copy the value under **OpenID Connect metadata document**. <br>4. Open the URL in a browser and locate the **issuer** field. <br>5. Copy the issuer value. | This site setting validates the issuer claim (iss) of incoming JSON Web Tokens (JWT). It ensures that a trusted identity provider issued the bearer token. |
+| Set MCP client ID | `Authentication/OpenIdConnect/AzureAD/MCPClientId` | Your third-party app client ID <br><br>**Note**: You can find the client ID in the Microsoft Entra admin center under your third-party app registration's **Overview** page. It's labeled as "Application (client) ID". | This site setting identifies the third-party app registered to enable MCP server. |
+| Configure MCP scope | `Authentication/OpenIdConnect/AzureAD/MCPScope` | [Your MCP scope URI] openid profile. The value should contain three space-separated scopes: your full MCP scope URI (for example, `api://00000000-0000-0000-0000-000000000000/mcp`), `openid`, and `profile` <br><br>**Note**: Ensure all three scopes are included and separated by single spaces. The MCP scope URI must match exactly the scope you created in your Microsoft Entra ID app registration. | This site setting defines the OAuth 2.0 scopes that the Power Pages runtime requests when authenticating an MCP client. |
+| Enable MCP server | `MCP/Enabled` | `true` | This site setting enables or disables MCP server for the site. |
 
 # [Microsoft Entra External ID](#tab/entra-external-id)
 
 The following table lists all the site settings required to enable MCP server with Microsoft Entra External ID:
 
-| Site setting |  Name | Value |
-|-------|------------------|-------|
-| Enable bearer authentication | `Authentication/BearerAuthentication/Enabled` | `True` |
-| Set authentication protocol | `Authentication/BearerAuthentication/Protocol` | `OpenIdConnect` |
-| Configure authentication provider | `Authentication/BearerAuthentication/Provider` | `OPENID_1` <br><br>**Note**: The provider name `OPENID_1` is used as a configuration identifier. The subsequent settings use this same identifier to group related authentication settings. |
-| Set MCP client ID | `Authentication/OpenIdConnect/{Provider}/MCPClientId` | Your third-party app client ID <br><br>**Note**: You can find the client ID in the Microsoft Entra admin center under your third-party app registration's Overview page. It's labeled as "Application (client) ID". |
-| Configure MCP scope | `Authentication/OpenIdConnect/{Provider}/MCPScope` | [Your MCP scope URI] openid profile. The value should contain three space-separated scopes, your full MCP scope URI (for example, `api://00000000-0000-0000-0000-000000000000/mcp`), `openid`, and `profile` <br><br>**Note**: Ensure all three scopes are included and separated by single spaces. The MCP scope URI must match exactly the scope you created in your Microsoft Entra External ID app registration. |
-| Enable MCP server | `MCP/Enabled` | `true` |
+| Site setting |  Name | Value | Description |
+|-------|------------------|-------|----------|
+| Enable bearer authentication | `Authentication/BearerAuthentication/Enabled` | `True` | Enables bearer token authentication, which lets Power Pages securely pass the authenticated user's token (such as an ID token) to external APIs for API-level authorization. |
+| Set authentication protocol | `Authentication/BearerAuthentication/Protocol` | `OpenIdConnect` | This setting specifies the protocol type—most commonly OpenIdConnect—used by the backend to validate tokens passed in the `Authorization: Bearer <token>` HTTP header. |
+| Configure authentication provider | `Authentication/BearerAuthentication/Provider` | `AzureAD` | This setting lets administrators define which specific authentication provider (for example, Azure AD B2C or another OpenID Connect compatible service) the Power Pages site uses to validate bearer tokens presented during requests to the site. |
+| Set MCP client ID | `Authentication/OpenIdConnect/{Provider}/MCPClientId` | Your third-party app client ID <br><br>**Note**: You can find the client ID in the Microsoft Entra admin center under your third-party app registration's Overview page. It's labeled as "Application (client) ID". | This site setting identifies the third-party app registered to enable MCP server.|
+| Configure MCP scope | `Authentication/OpenIdConnect/{Provider}/MCPScope` | [Your MCP scope URI] openid profile. The value should contain three space-separated scopes, your full MCP scope URI (for example, `api://00000000-0000-0000-0000-000000000000/mcp`), `openid`, and `profile` <br><br>**Note**: Ensure all three scopes are included and separated by single spaces. The MCP scope URI must match exactly the scope you created in your Microsoft Entra External ID app registration. | This site setting defines the OAuth 2.0 scopes that the Power Pages runtime requests when authenticating an MCP client. |
+| Enable MCP server | `MCP/Enabled` | `true` | This site setting enables or disables MCP server for the site. |
 
 ---
 
