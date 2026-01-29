@@ -84,6 +84,12 @@ Establish a connection that allows the agent to authenticate with your MCP Serve
 
 Check your MCP server details in the **Tools** section of the agent you created.
 
+:::image type="content" source="media/mcp-overview/mcp-server-details-tool-section.png" alt-text="Screenshot showing MCP server option in Tools section.":::
+
+To review more details, select the MCP server as shown in the following image:
+
+:::image type="content" source="media/mcp-overview/mcp-server-details.png" alt-text="Screenshot showing MCP server details.":::
+
 
 ### Publish agent
 
