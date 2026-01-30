@@ -17,7 +17,7 @@ This article shows you how to configure the required site settings in Power Page
 
 Before you begin, ensure you have:
 
-- Completed the [identity provider setup](mcp-configure-entra.md) setup
+- Completed the [identity provider setup](mcp-configure-entra.md)
 - The client ID from your third-party app registration
 - The full MCP scope URI from your Microsoft Entra External ID app
 - Access to Power Pages Management in the Power Pages maker portal
