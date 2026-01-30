@@ -19,7 +19,7 @@ After you complete the following steps, your chosen AI clients can authenticate 
 
 Before you begin, make sure you have:
 
-- Completed the [Create and configure third party app registration](mcp-configure-third-party-app.md)
+- Completed the [identity provider setup](mcp-configure-entra.md) and [configured site settings for MCP](mcp-configure-site-settings.md)
 - Access to the Microsoft Entra admin center with permissions to modify app registrations
 - Knowledge of which client types you need to support (web, single-page application, or mobile/desktop)
 
