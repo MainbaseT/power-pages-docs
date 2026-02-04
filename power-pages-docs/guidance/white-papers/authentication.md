@@ -10,13 +10,13 @@ ms.reviewer: smurkute
 contributors:
 ---
 
-# Power Pages architecture white paper
+# Power Pages authentication white paper
 
 Authentication is a foundational element of any external-facing Power Pages site, shaping how users securely access data and interact with business processes. This white paper offers a comprehensive overview of authentication in Microsoft Power Pages, outlining the underlying architecture, supported identity providers, built‑in security controls, and recommended best practices. It serves as a practical guide to help makers design robust, scalable, and user‑centric authentication experiences that protect organizational data while delivering seamless access for customers, partners, and other external users.
 
 **Author**: Bipul Deora (Microsoft)
 
-**Download**: Download the white paper from here: 
+**Download**: Download the white paper from here: [https://aka.ms/PowerPagesAuthentication](https://aka.ms/PowerPagesAuthentication)
 
 ### See also
 
