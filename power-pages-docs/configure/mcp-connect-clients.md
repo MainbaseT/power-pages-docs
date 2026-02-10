@@ -58,7 +58,7 @@ Set up OAuth 2.0 authentication to enable secure connections between the agent a
    - **Client Secret**: Enter the client secret value
    - **Authorization URL**: Enter the authorization endpoint
    - **Token URL Template**: Enter the token endpoint
-   - **Scopes**: Enter the required scopes (MCP scope URI, such as `api://00000000-0000-0000-0000-000000000000/mcp`, openid, profile)
+   - **Scopes**: Enter the required scopes (MCP scope URI such as `api://00000000-0000-0000-0000-000000000000/mcp`, openid, profile)
 1. In the **Refresh URL** field, enter a period (`.`).
 1. Select **Create**.
 
