@@ -4,7 +4,7 @@ description: Discover how Power Pages authentication ensures high reliability, a
 author: shwetamurkute
 ms.topic: overview
 ms.custom: 
-ms.date: 02/03/2026
+ms.date: 02/10/2026
 ms.author: smurkute
 ms.reviewer: smurkute
 contributors:
@@ -16,7 +16,7 @@ Authentication is a foundational element of any external-facing Power Pages site
 
 **Author**: Bipul Deora (Microsoft), Srinidhi VK (Microsoft)
 
-**Download**: Download the white paper from here: [https://aka.ms/PowerPagesAuthentication](https://aka.ms/PowerPagesAuthentication)
+**Download**: Download the white paper from here: [https://aka.ms/PowerPagesAuthentication](https://aka.ms/PowerPagesAuthentication) 
 
 ### See also
 
