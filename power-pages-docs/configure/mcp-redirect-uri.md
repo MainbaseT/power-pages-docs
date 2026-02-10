@@ -11,7 +11,7 @@ ms.topic: how-to
 
 # Configure redirect URIs for MCP clients
 
-This article shows you how to configure redirect URIs in your third-party app registration to enable different types of AI clients to connect to your MCP Server. Redirect URIs specify where the Microsoft identity platform sends security tokens after authentication. Redirect URIs are configured in platform configurations in the Microsoft Entra admin center. For web and single-page applications, you need to specify a redirect URI manually. For mobile and desktop platforms, you select from generated redirect URIs. Learn more in [Add a redirect URI to your application](/entra/identity-platform/how-to-add-redirect-uri).
+This article shows you how to configure redirect URIs in your third-party app registration to enable different types of AI clients to connect to your MCP Server. Redirect URIs specify where the Microsoft identity platform sends security tokens after authentication. Configure redirect URIs in platform configurations in the Microsoft Entra admin center. For web and single-page applications, specify a redirect URI manually. For mobile and desktop platforms, select from generated redirect URIs. For more information, see [Add a redirect URI to your application](/entra/identity-platform/how-to-add-redirect-uri).
 
 After you complete the following steps, your chosen AI clients can authenticate and connect to your Power Pages MCP server.
 
@@ -44,22 +44,22 @@ Use this configuration to access MCP server via apps such as Microsoft 365.
 Use this configuration to test MCP Server connections from localhost.
 
 1. Select **Single-page application** from the platform options.
-1. Enter the localhost URL: `http://localhost:33418`.
+1. Enter the URL of the single-page application (for example, `www.example.com/callback`).
 1. Select **Configure**.
 
 > [!NOTE]
-> This configuration is primarily for testing and development purposes. For production scenarios, use web, mobile or desktop platform configurations.
+> Use this configuration primarily for testing and development purposes. For production scenarios, use web, mobile, or desktop platform configurations.
 
 ## Configure redirect URI for mobile and desktop applications
 
 Use this configuration to enable desktop AI clients, such as VS Code extensions or other native applications.
 
 1. Select **Mobile and desktop applications** from the platform options.
-1. Enter the local loopback address: `http://127.0.0.1:33418`.
+1. Enter the local loopback address. For example, for VSCode - `http://127.0.0.1:33418`. 
 1. Select **Configure**.
 
 > [!IMPORTANT]
-> The loopback address `127.0.0.1` is used instead of `localhost` for desktop applications to ensure compatibility across different operating systems and network configurations.
+> Use the loopback address `127.0.0.1` instead of `localhost` for desktop applications to ensure compatibility across different operating systems and network configurations.
 
 ## Verify configuration
 
@@ -67,7 +67,7 @@ After adding your platform configurations, verify that the redirect URIs appear 
 
 ## Next steps
 
-Now that you've configured redirect URIs, you can connect AI clients to your MCP Server.
+After configuring redirect URIs, you can connect AI clients to your MCP Server.
 
 > [!div class="nextstepaction"]
 > [Connect to MCP Server via Microsoft 365 Copilot](mcp-connect-clients.md)

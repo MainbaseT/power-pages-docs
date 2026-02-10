@@ -5,7 +5,7 @@ description: Learn how to connect AI chat clients to your MCP Server for seamles
 author: shwetamurkute
 ms.author: vipingulati
 ms.reviewer: smurkute
-ms.date: 01/28/2026
+ms.date: 02/10/2026
 ms.topic: how-to
 ---
 
@@ -28,7 +28,7 @@ Before you begin, ensure you have:
 
 ### Create an agent
 
-Create a new agent in Microsoft Copilot Studio that will serve as the interface.
+Create a new agent in Microsoft Copilot Studio that serves as the interface.
 
 1. Sign in to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/).
 1. In the left navigation pane, select **Create**, and then select **New agent**. 
@@ -58,7 +58,7 @@ Set up OAuth 2.0 authentication to enable secure connections between the agent a
    - **Client Secret**: Enter the client secret value
    - **Authorization URL**: Enter the authorization endpoint
    - **Token URL Template**: Enter the token endpoint
-   - **Scopes**: Enter the required scopes (MCP scope, openid, profile)
+   - **Scopes**: Enter the required scopes (MCP scope URI, such as `api://00000000-0000-0000-0000-000000000000/mcp`, openid, profile)
 1. In the **Refresh URL** field, enter a period (`.`).
 1. Select **Create**.
 
@@ -66,8 +66,8 @@ Set up OAuth 2.0 authentication to enable secure connections between the agent a
 
 Copy the redirect URL from Copilot Studio and add it to your third-party app registration.
 
-1. After the tool is created, copy the **Redirect URL** shown in the success message, and then select **Next**.
-1. Navigate to the [Microsoft Entra admin center](https://entra.microsoft.com/), select **App registrations**, and locate your third-party app.
+1. After creating the tool, copy the **Redirect URL** from the success message, and then select **Next**.
+1. Go to the [Microsoft Entra admin center](https://entra.microsoft.com/), select **App registrations**, and find your third-party app.
 1. Select **Authentication**, select **Add URI**, paste the redirect URL, and then select **Save**.
 
 ### Create connection for agent
@@ -110,7 +110,7 @@ Configure the agent to be available in Microsoft 365 Copilot.
 
 1. Select **Channels** and select **Teams and Microsoft 365 Copilot**.
 1. In the pane that appears, select **Add channel**.
-1. After the channel is added, you'll see links to access the agent in Microsoft 365 Copilot.
+1. After the channel is added, you see links to access the agent in Microsoft 365 Copilot.
 
    :::image type="content" source="media/mcp-overview/channel-added.png" alt-text="Screenshot showing the successful channel addition with access links.":::
 
@@ -119,7 +119,7 @@ Configure the agent to be available in Microsoft 365 Copilot.
 
 ## Connect via Microsoft 365 Copilot  
 
-After the agent is published, end users can add it to Microsoft 365 Copilot and interact with Power Pages data through natural language.
+After you publish the agent, end users can add it to Microsoft 365 Copilot and interact with Power Pages data through natural language.
 
 ### Prerequisites
 
@@ -129,7 +129,7 @@ After the agent is published, end users can add it to Microsoft 365 Copilot and 
 ### Add agent in Microsoft 365 Copilot and perform operations
 
 1. Sign in to [Microsoft 365 Copilot](https://copilot.cloud.microsoft/) with your credentials.
-1. Add the agent from the left pane. The agent appears in the left pane and the chat interface will open on the right.
+1. Add the agent from the left pane. The agent appears in the left pane and the chat interface opens on the right.
 1. Enter a query related to your Power Pages data. For example: "Find me the account details".
 
 > [!NOTE]
