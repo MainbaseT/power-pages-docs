@@ -5,7 +5,7 @@ description: Learn how to configure and secure Power Pages server logic, includi
 author: nageshbhat-msft
 ms.author: nabha
 ms.reviewer: smurkute
-ms.date: 01/22/2026
+ms.date: 02/04/2026
 ms.topic: concept-article
 ---
 
@@ -25,7 +25,6 @@ Dataverse stores code and configuration, so server logic benefits from the same 
 >
 > - This feature is a preview feature.
 > - Preview features aren’t meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is available only for site running on [Enhanced Data Model](../admin/enhanced-data-model.md).
 
 ## Language support
 
@@ -98,6 +97,7 @@ Each method maps to a function you define in your server logic code.
 | GET     | function get() { }    | Retrieve data.                     | Used to fetch data from Dataverse, external APIs, or custom business logic. Ideal for read-only operations where no data changes are made. |
 | POST    | function post() { }   | Create records or send new data.   | Commonly used to insert new records into Dataverse or send data to external systems. Suitable for form submissions or workflows that need to create or trigger actions. |
 | PUT     | function put() { }    | Replace or update records.         | Updates or replaces an entire record or dataset. Typically used for full updates or synchronization scenarios. |
+| PATCH   | function patch() { }  | Updates part of a record (upsert).  | Performs a partial update of existing data without replacing the entire record. Use this method when only specific fields need modification. |
 | DELETE  | function del() { }    | Delete records or fields.          | Removes records or data from Dataverse or an external system. Should be used cautiously to prevent unintended data loss. |
 
 ## Next step
