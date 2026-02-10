@@ -2,7 +2,7 @@
 title: Configure Omnichannel with Power Pages site agent
 description: Learn how to configure Omnichannel with Power Pages site agent for seamless live agent escalation.
 ms.topic: how-to
-ms.date: 06/17/2025
+ms.date: 01/22/2026
 ms.update-cycle: 180-days
 author: nageshbhat-msft
 ms.author: nabha
@@ -28,7 +28,7 @@ ms.custom:
 
 ## Configure agent hand-off in Copilot Studio
 
-The agent added with Power Pages Studio doesn't include instructions for transferring calls to Omnichannel.
+The agent added with Power Pages design studio doesn't include instructions for transferring calls to Omnichannel.
 
 To enable this functionality, configure the agent manually in Copilot Studio. You can access Copilot Studio directly from the Power Pages design studio.
 

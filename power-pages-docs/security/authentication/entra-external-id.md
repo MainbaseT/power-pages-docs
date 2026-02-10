@@ -1,7 +1,7 @@
 ---
 title: Set up Microsoft Entra External ID with Power Pages
 description: Learn how to set up Microsoft Entra External ID authentication for sites created with Power Pages.
-ms.date: 04/29/2025
+ms.date: 01/22/2026
 ms.topic: how-to
 author: DanaMartens
 ms.author: bipuldeora
@@ -26,7 +26,7 @@ Follow these steps to set up Microsoft Entra External ID in Power Pages:
 
 To configure Microsoft Entra as an identity provider:
 
-1. Sign in to [Power Pages Studio](https://make.powerpages.microsoft.com).
+1. Sign in to [Power Pages design studio](https://make.powerpages.microsoft.com).
 1. Locate the site where you want to enable Microsoft Entra External ID.
 1. Select **Edit**.
 1. Select **Security > Identity providers**.

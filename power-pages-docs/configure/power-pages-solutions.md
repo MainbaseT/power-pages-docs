@@ -3,7 +3,7 @@ title: Use solutions with Power Pages
 description: Learn how to use solutions with Power Pages.
 author: neerajnandwana
 ms.topic: how-to
-ms.date: 10/24/2025
+ms.date: 01/29/2026
 ms.author: nenandw
 ms.reviewer: dmartens
 contributors:
@@ -30,7 +30,7 @@ You'll need to enable enhanced data model to use solutions with Power Pages. Mor
 
 1. On the toolbar at the top of the page, select **New solution**. Fill in the solution details, and then select **Create** to create the solution.
 1. Go to the new solution.
-1. On the **Add existing** menu, select **Site**.
+1. On the **Add existing** menu, select **Site** \> **Site**.
 
     :::image type="content" source="media/solutions/add-to-solution.png" alt-text="Screenshot that shows the Site command on the Add existing menu.":::
 
@@ -54,7 +54,7 @@ As you create new components and add them to your website, you can add them to t
 
 1. On the Power Pages home page, select the **Solutions** tab.
 1. Select the solution that you want to add components to.
-1. On the **Add existing** menu, select **More** \> **Other** \> **Site Component**.
+1. On the **Add existing** menu, select **Site** \> **Site Component**.
 1. In the **Add existing Site component** panel, select the site components, and then select **Add** to add them to the solution.
 
 ## Export the solution from the source environment

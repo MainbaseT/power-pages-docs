@@ -4,7 +4,7 @@ description: Learn how to customize pages by using the Visual Studio Code for th
 author: neerajnandwana-msft
 ms.topic: how-to
 ms.custom: 
-ms.date: 09/25/2025
+ms.date: 01/22/2026
 ms.subservice:
 ms.author: nenandw 
 ms.reviewer: dmartens
@@ -86,15 +86,15 @@ Go to **Styling workspace** and select available custom CSS **Edit code** menu t
 
 ## Power Pages Actions view
 
-The **Power Pages Actions** view, accessible at the bottom of File Explorer, lets you manage Power Pages sites directly within the editor. It reduces the need to switch to Power Pages Studio by letting developers perform common tasks quickly from within the editor. 
+The **Power Pages Actions** view, accessible at the bottom of File Explorer, lets you manage Power Pages sites directly within the editor. It reduces the need to switch to Power Pages design studio by letting developers perform common tasks quickly from within the editor. 
 
 ### Available Actions
 
 - **Preview site**  
-  This action clears the [configuration cache](../admin/clear-server-side-cache.md#metadataconfiguration-tables) and opens the site in VS Code. It enables developers to preview and test changes to the site code without needing to switch context to Power Pages Studio. 
+  This action clears the [configuration cache](../admin/clear-server-side-cache.md#metadataconfiguration-tables) and opens the site in VS Code. It enables developers to preview and test changes to the site code without needing to switch context to Power Pages design studio. 
 
-- **Open in Power Pages Studio**  
-  After making code changes, use this action to go to Power Pages Studio. This is useful for configuring authentication providers, web roles, and other site settings that aren't editable in the code editor.
+- **Open in Power Pages design studio**  
+  After making code changes, use this action to go to Power Pages design studio. This is useful for configuring authentication providers, web roles, and other site settings that aren't editable in the code editor.
 
 - **Open in VS Code Desktop**  
   If VS Code Desktop is installed, this action opens the site in the desktop app. It also triggers a site download, ensuring the code is available locally and ready for editing.
@@ -160,9 +160,9 @@ Users can edit, debug, and preview changes to page edits using Visual Studio Cod
 ## Editing code in the Portals Management app
 
 > [!NOTE]
-> - Using Visual Studio Code for the Web to edit websites isn't supported in Government Community Cloud (GCC), Government Community Cloud (GCC High), and Department of Defense (DoD). Users in these regions can use the [Portals Management app](portal-management-app.md) to make their changes.
+> - Using Visual Studio Code for the Web to edit websites isn't supported in Government Community Cloud (GCC), Government Community Cloud (GCC High), and Department of Defense (DoD). Users in these regions can use the [Portal Management app](portal-management-app.md) to make their changes.
 
-If the region doesn't support the **Visual Studio Code for the Web**, selecting the code editor icon &lt;/&gt; in the command bar will open the **Portals Management app**.
+If the region doesn't support the **Visual Studio Code for the Web**, selecting the code editor icon &lt;/&gt; in the command bar will open the **Portal Management app**.
 
 Navigate to the corresponding **Web Pages**, **Basic Forms**, **Multistep Forms**, **Lists**, or **Web Templates** records to edit code.
 

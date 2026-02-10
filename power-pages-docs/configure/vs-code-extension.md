@@ -2,10 +2,9 @@
 title: Use the Visual Studio Code extension 
 description: Learn about how to use the Visual Studio Code extension for Power Pages and integrate with Microsoft Power Platform CLI for CI/CD.
 author: neerajnandwana-msft
-
 ms.topic: how-to
 ms.custom: 
-ms.date: 10/15/2025
+ms.date: 01/29/2026
 ms.subservice: 
 ms.author: nenandw
 ms.reviewer: dmartens
@@ -79,7 +78,7 @@ Within this pane, sites are categorized as follows:
 
 To switch environments:
 
-1. Select on the **Change Environment** button within the Power Pages Actions pane.
+1. Select the **Change Environment** button within the Power Pages Actions pane.
 
     :::image type="content" source="media/vs-code-extension/changeEnv.png" alt-text="Change environment for sites":::
 
@@ -100,15 +99,16 @@ Right-click on Active Sites to access the following actions:
 - **Download**: Downloads the site content to a local folder for offline editing.
 - **Site Details**: Displays detailed information about the site.
 - **Reveal in Explorer**: Navigates to the local directory containing the site's code.
-- **Open in Power Pages Studio**: Opens the site in Power Pages studio.
+- **Open in Power Pages design studio**: Opens the site in Power Pages design studio.
 - **Run CodeQL screening**: Perform static code analysis on HTML and JavaScript files to identify vulnerabilities in your codebase using [**CodeQL**](https://codeql.github.com/). This option is available only for sites that are downloaded locally, indicated by the **Current** tag in the active sites list.
+- **Compare with Local**: Opens a comparison view to identify differences between your local workspace and the remote environment. [See more detail about compare site configuration feature](#compare-site-configuration). 
 
 #### Inactive Sites actions
 
 Inactive Sites provide these actions:
 
 - **Open Site Management**: Opens the site within the Power Pages management application.
-- **Site Details**: Provides detailed information about the selected site like website ID, website URL, data model version and more.
+- **Site Details**: Provides detailed information about the selected site like website ID, website URL, data model version, and more.
 
 #### Other Sites actions
 
@@ -129,7 +129,7 @@ To enable a portals-specific file-icon theme:
 
 1. Open Visual Studio Code.
 
-1. Go to **File** > **Preferences** > **Theme** > **File Icon Theme**
+1. Go to **File** > **Preferences** > **Theme** > **File Icon Theme**.
 
 1. Select the theme for **PowerApps portals Icons**.
 
@@ -148,6 +148,47 @@ To open the preview, right-click your active site under [Power Pages Actions](#p
 The preview pane opens on the right side.
 
 :::image type="content" source="media/vs-code-extension/site-preview.png" alt-text="Screenshot showing the file list, open file in Visual Studio Code editor, and a preview on the right side.":::
+
+## Compare site configuration
+
+Use the **Compare with Local** option to identify differences between your local workspace and the live site configuration in the remote environment. This feature helps you to detect unintended changes, to troubleshoot environment-specific issues, and to maintain consistency before you synchronize your site configurations.
+
+When you select this action, a **Site Comparison** section opens under the **Tools** in the Power Pages Actions view. This section displays all files in your local workspace that differ from the environment, highlighting:
+
+* **Added**: New files created in the local workspace that do not exist in the environment.
+* **Modified**: Files where the code or metadata differs between the local and environment versions.
+* **Deleted**: Files that have been removed from the local workspace but still exist in the environment.
+
+To compare a live site configuration with the local workspace:
+
+1. In the Explorer sidebar, expand the **Power Pages Actions** pane.
+2. In the **Active/Inactive Sites** list, right-click the site you want to compare.
+3. Select **Compare with Local**.
+
+:::image type="content" source="media/vs-code-extension/compare-with-local.png" alt-text="Screenshot showing Compare with local option in the site list.":::
+
+To compare a specific folder: 
+
+ 1. In the Explorer sidebar, select a folder (such as `web-pages`) from your local workspace.
+ 2. Right-click and select **Power Pages** > **Compare with Environment**.
+
+:::image type="content" source="media/vs-code-extension/compare-local-folder-with-environment.png" alt-text="Screenshot showing compare option in the local workspace folder.":::
+
+### Manage comparison results
+
+Once the **Site Comparison** tab is active with changes, you can right-click the comparison list to access additional actions:
+
+- **Open All Diffs**: Opens the Visual Studio Code diff editor for every file in the list to review all changes simultaneously.
+- **Refresh Comparison**: Re-scans the local workspace and remote environment to update the list with the latest changes.
+- **Export as HTML Report**: Generates a shareable HTML document detailing all detected differences.
+- **Export as JSON**: Exports the comparison data in JSON format for automated workflows or custom reporting. You can share this exported file with team members, who can import it into their own view to by right-clicking on the **Site Comparison** section and selecting the **Import Comparison** option.
+- **Discard All Local Changes**: Reverts all local edits to match the version currently in the remote environment.
+- **Remove Comparison**: Closes the current comparison session and clears the results tab.
+
+> [!TIP]
+> Exporting and sharing comparison data as JSON allows your team to collaborate on resolving configuration differences without requiring everyone to be connected to the same environment.
+
+:::image type="content" source="media/vs-code-extension/site-comparison.png" alt-text="Screenshot showing options avaiable in site comparison tab":::
 
 ## Autocomplete
 

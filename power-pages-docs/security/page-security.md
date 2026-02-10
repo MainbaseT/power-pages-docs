@@ -1,7 +1,7 @@
 ---
 title: Set page permissions
 description: Learn how to use page permissions to secure the content of sites you create with Microsoft Power Pages.
-ms.date: 07/21/2023
+ms.date: 01/27/2026
 ms.topic: how-to
 author: dmartens
 ms.author: dmartens
@@ -84,11 +84,17 @@ For example, you want users who have the news editor web role to be able to edit
 
 A grant change rule should always be present and applied to the home page in any site that you want to be able to edit on the front end. Because it applies to the home page, it's the default rule for the entire site. Associate the rule with a web role that grants content publishing rights and assign your content editors to the role.
 
+> [!NOTE]
+> Grant change rules don't just allow editing. They also grant read access that overrides restrict read rules. Users with a grant change rule can view the page and all child pages, even if a restrict read rule otherwise block them.
+
 #### Restrict read
 
 Use a restrict read rule to limit viewing the contents of a page, and its child pages, to specific users.
 
 For example, only employees may view a certain branch of your site. You want to restrict the ability to read this branch to people who have the employee web role. In this case, you create a rule called "restrict read to employees only." You set **Right** to **Restrict Read** and **Web Page** to the page at the top of the branch that's intended only for employees. Then you associate the rule with the employee web role and assign users to the role.
+
+> [!WARNING]
+> Grant change rules on the home page with scope 'All content' override restrict read rules site-wide. To restrict pages from a role with home page grant change, remove that role from the home page rule.
 
 > [!NOTE]
 > If you apply the restrict read right to the home page of a site and select **Exclude direct child web files** as the **Scope**, the home page's direct child web files are accessible to all users.
@@ -142,6 +148,12 @@ To fix this problem, change the permissions.
 If you apply multiple active permissions on the same page in the Portal Management app, you see the following error: "There are multiple, conflicting access control rules applied to this page. Deactivate the extra rules so there is only one with restricted read-write access."
 
 To fix this error, deactivate the permissions the page doesn't need so that only one permission is active.
+
+### Restrict read rule doesn't work for admins
+
+If your restrict read rule doesn't prevent admins from viewing a page, check if there's a grant change rule on the home page assigned to the admins web role. Grant change rules take precedence over restrict read rules, so admins with a grant change rule on the home page with scope "All content" can access all pages regardless of restrict read rules.
+
+To fix this problem, remove the admins role from the grant change rule on the home page, or change the scope of the rule.
 
 ## Troubleshoot child files permissions
 

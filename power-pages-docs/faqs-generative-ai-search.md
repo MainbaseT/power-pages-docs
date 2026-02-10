@@ -1,7 +1,7 @@
 ---
 title: FAQ for site search with generative AI
 description: This FAQ discusses generative AI search and key considerations for making use of this technology responsibly.
-ms.date: 02/05/2025
+ms.date: 01/22/2026
 ms.update-cycle: 180-days
 ms.custom: responsible-ai-faqs
 ms.topic: faq
@@ -46,7 +46,7 @@ The capability was evaluated over custom datasets for offensive and malicious pr
 ## What operational factors and settings allow for effective and responsible use of the system?
 
 - Before deploying capability into the production system, it's crucial to thoroughly test and review its functionality. This includes assessing its capacity to provide accurate, relevant, and free of offensive language responses to user prompts on the site.
-- Use the **refine your data** option in Power Pages Studio to scope the search responses used to generate the answers.
+- Use the **refine your data** option in Power Pages design studio to scope the search responses used to generate the answers.
 
 ## See also
 

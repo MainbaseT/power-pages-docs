@@ -47,7 +47,7 @@ Before using the data summarization API, use the Portal Management app to enable
 
 In this step, you add a summary section at the top of the case page.
 
-1. Open [Power Pages studio](https://make.powerpages.microsoft.com).
+1. Open [Power Pages design studio](https://make.powerpages.microsoft.com).
 1. Select **Edit** for the site that you want to edit.
 1. Select **Customer Service - Edit Case**.
 
