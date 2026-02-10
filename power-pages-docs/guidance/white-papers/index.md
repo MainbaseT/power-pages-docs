@@ -4,7 +4,7 @@ description: Power Pages white papers
 author: dmartens
 ms.topic: overview
 ms.custom: 
-ms.date: 11/14/2022
+ms.date: 02/04/2026
 ms.author: dmartens
 ms.reviewer: danamartens
 contributors:
@@ -18,6 +18,7 @@ White papers provide information about Power Pages at a deeper level. Here you c
 | --- | --- | --- |
 | [Architecture white paper](architecture.md) |This white paper provides a comprehensive view of the capabilities of the Power Pages platform. It describes the architectural elements that enable Power Pages to scale, offer high reliability and availability, and protect business data to offer enterprise grade compliance and security. | October 2022 |
 | [Security white paper](security.md)| This white paper describes how Power Pages offers enterprise grade security and the tools and capabilities it offers for administrators and makers to harden security for their external applications. | October 2022 |
+| [Authentication white paper](authentication.md)| This white paper offers a comprehensive overview of authentication in Microsoft Power Pages, outlining the underlying architecture, supported identity providers, built‑in security controls, and recommended best practices. | February 2026 |
 
 ### See also
 
