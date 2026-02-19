@@ -20,7 +20,7 @@ The plugin supports the full site development lifecycle through these conversati
 > [!IMPORTANT]
 > - This feature is a preview feature.
 > - [!INCLUDE [preview-tags](../includes/cc-preview-features-definition.md)]
-> - 
+> - [Review agent proposals before approving](#review-agent-proposals-before-approving)
 
 ## Prerequisites
 
