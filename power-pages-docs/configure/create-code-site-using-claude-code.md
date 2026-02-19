@@ -160,7 +160,7 @@ Run `/activate-site` to make the site publicly accessible. The plugin:
 
 At this point you have a working site at a public URL. The remaining steps add data, authentication, and SEO skip any that don't apply to your site.
 
-### Step 4: Set up your data model (optional)
+### Step 4: Set up your data model
 
 Run `/setup-datamodel` to create the Dataverse tables your site needs. If you already have an ER diagram or specific schema, provide it directly instead of having the agent analyze your code.
 
@@ -172,7 +172,7 @@ The plugin spawns a **Data Model Architect** agent that:
 
 **You review and approve the proposal.** Nothing is created until you confirm. After approval, the plugin creates the tables and columns through API calls and saves a manifest file that Steps 5 and 6 use.
 
-### Step 5: Add sample data (optional)
+### Step 5: Add sample data
 
 Run `/add-sample-data` to populate your tables with test records. Requires the data model from Step 4.
 
@@ -182,7 +182,7 @@ The plugin:
 1. Generates contextually appropriate values, realistic emails, plausible dates, formatted currency amounts for each column type.
 1. Inserts records in dependency order (parent tables before child tables) and refreshes authentication tokens automatically during bulk inserts.
 
-### Step 6: Integrate with the Dataverse Web API (optional)
+### Step 6: Integrate with the Dataverse Web API
 
 Run `/integrate-webapi` to replace mock data with live Dataverse queries. Requires the data model from Step 4.
 
@@ -198,7 +198,7 @@ The plugin:
 
 **You review and approve the permissions proposal.** No configuration files are created until you confirm.
 
-### Step 7: Create web roles (optional)
+### Step 7: Create web roles
 
 Run `/create-webroles` to define user access roles. The plugin:
 
@@ -206,7 +206,7 @@ Run `/create-webroles` to define user access roles. The plugin:
 1. Generates role definitions with unique identifiers.
 1. Enforces that each site has at most one anonymous role and one authenticated role.
 
-### Step 8: Set up authentication (optional)
+### Step 8: Set up authentication
 
 Run `/setup-auth` to add login and logout functionality. The plugin:
 
@@ -215,7 +215,7 @@ Run `/setup-auth` to add login and logout functionality. The plugin:
 1. Adds role-based access control utilities that show or hide UI elements based on the user's web roles.
 1. Uses your framework's patterns throughout (React hooks, Vue composables, or Angular services).
 
-### Step 9: Add SEO (optional)
+### Step 9: Add SEO
 
 Run `/add-seo` to optimize your site for search engines. The plugin:
 
