@@ -59,7 +59,7 @@ pac auth create --environment <Instance url>        # Authenticate to Power Plat
 
 ## Install the plugin
 
-You can install the Power Pages plugin from the marketplace or from a local GitHub repository. If you use GitHub Copilot CLI, see the [Copilot CLI extensions documentation](https://docs.github.com/copilot/concepts/agents/copilot-cli/about-copilot-cli) for equivalent install steps. The commands below use Claude Code syntax.
+You can install the Power Pages plugin from the marketplace. If you use GitHub Copilot CLI, see the [Copilot CLI extensions documentation](https://docs.github.com/copilot/concepts/agents/copilot-cli/about-copilot-cli) for equivalent install steps. The commands below use Claude Code syntax.
 
 ### Install from marketplace
 
