@@ -120,44 +120,7 @@ A common end-to-end workflow follows this sequence:
 > [!TIP]
 > You don't need to follow this exact order. Each skill checks its own prerequisites and tells you if something is missing. For example, you can run `/setup-auth` before `/integrate-webapi` if your site needs authentication first.
 
-## Build your first site
-
-This section guides you through creating a complete Power Pages SPA site with Dataverse tables, Web API configuration, and authentication.
-
-### What you build
-
-By the end of this quickstart, you have a modern single-page application (SPA) deployed to Power Pages with:
-
-- A responsive frontend using React, Angular, Vue, or Astro
-- Dataverse tables for data storage
-- Web API for frontend-backend communication
-- Authentication with role-based access control
-
-### Step 1: Create your site
-
-1. Run the create site skill:
-
-   ```bash
-   /create-site
-   ```
-
-1. Answer the prompts when Claude asks:
-
-   | Prompt | Description |
-   |--------|-------------|
-   | Site purpose | Describe what your site does |
-   | Framework | Choose React (recommended), Angular, Vue, or Astro |
-   | Features | Select landing page, forms, authentication, and other features |
-   | Design | Describe your preferred style and colors |
-
-The skill creates a complete SPA project, configures it for Power Pages, builds and previews locally, and uploads and activates on Power Pages.
-
-> [!NOTE]
-> Only client side JavaScript frameworks are supported. Server-side rendering frameworks like Next.js, Nuxt.js, Remix, and SvelteKit aren't supported.
-
-### Step 2: Add Dataverse tables
-
-1. Run the setup Dataverse skill:## Build your first site
+## Build your Power Pages site
 
 This walkthrough covers the full lifecycle of building a Power Pages site with the plugin, from scaffolding through deployment. Each step describes what you say and what the plugin does in response.
 
