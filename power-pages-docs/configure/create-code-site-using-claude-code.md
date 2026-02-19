@@ -14,14 +14,9 @@ contributors:
 # Get started with Power Pages plugin for Claude Code
 
 The Power Pages plugin for Claude Code enables AI-assisted development of Power Pages sites using modern single-page application (SPA) frameworks. With this plugin, you can create, configure, and deploy Power Pages sites through a conversational interface.
+The Power Pages plugin for Claude Code provides an AI-assisted workflow for creating, deploying, and managing Power Pages sites using modern [single-page application (SPA)](/power-pages/configure/create-code-sites) using modern frontend frameworks. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
 
-This article guides you through:
-
-- Installing required software and the plugin
-- Creating your first Power Pages SPA site
-- Configuring Dataverse tables and Web API access
-- Configuring Web roles, table permissions and site settings
-- Connecting your frontend to backend data
+The plugin supports the full site development lifecycle through these conversational skills, from scaffolding a new site to deploying it, setting up Dataverse data models and configuring authentication.
 
 ## Prerequisites
 
@@ -37,22 +32,11 @@ Before you begin, verify that you have the required software and permissions.
 | Power Platform CLI (PAC CLI) | Latest | [Install PAC CLI](/power-platform/developer/cli/introduction) |
 | Azure CLI | Latest | [Install Azure CLI](/cli/azure/install-azure-cli) |
 
-### Permission requirements
+You also need:
 
-You need **System Administrator** or **System Customizer** role for Power Pages and Dataverse.
-
-### Verify your environment
-
-Run the following commands to verify your environment is configured correctly.
-
-**Verify software installations:**
-
-```powershell
-node --version          # Should return v18.x or later
-code --version          # Should return version number
-pac help                # Should display PAC CLI help
-az --version            # Should display Azure CLI version
-```
+- A Power Platform environment with Power Pages enabled.
+- An authenticated PAC CLI session connected to your target environment. Run `pac auth create` if you haven't connected yet.
+- An Azure CLI session signed in to the same tenant. Run `az login` to authenticate.
 
 **Verify authentication:**
 
