@@ -13,7 +13,7 @@ contributors:
 
 # Get started with the Power Pages plugin for GitHub Copilot CLI and Claude Code
 
-The Power Pages plugin for [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and [Claude Code](https://claude.ai/code) provides an AI-assisted workflow for creating, deploying, and managing Power Pages sites using modern [single-page application (SPA)](/power-pages/configure/create-code-sites) using modern frontend frameworks. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
+The Power Pages plugin for [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and [Claude Code](https://claude.ai/code) provides an AI-assisted workflow for creating, deploying, and managing modern [single-page application (SPA)](/power-pages/configure/create-code-sites) sites on Power Pages. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
 
 The plugin supports the full site development lifecycle through these conversational skills, from scaffolding a new site to deploying it, setting up Dataverse data models and configuring authentication.
 
@@ -26,11 +26,10 @@ Before you begin, verify that you have the required software and permissions.
 | Component | Minimum version | More information |
 |-----------|-----------------|------------------|
 | Node.js | 18.0 or later | [Download Node.js](https://nodejs.org/) |
-| Visual Studio Code | Latest | [Download VS Code](https://code.visualstudio.com/) |
-| Power Platform Tools extension | Latest | [Install Power Platform Tools](/power-platform/developer/tools/devtools-install) |
 | Power Platform CLI (PAC CLI) | Latest | [Install PAC CLI](/power-platform/developer/cli/introduction) |
 | Azure CLI | Latest | [Install Azure CLI](/cli/azure/install-azure-cli) |
 | GitHub Copilot CLI or Claude Code | Latest | [GitHub Copilot CLI](https://github.com/features/copilot/cli/) or [Claude Code](https://claude.ai/code) |
+| Visual Studio Code and Power Platform Tools extension (Optional) | Latest | [Download VS Code](https://code.visualstudio.com/) and [Install Power Platform Tools](/power-platform/developer/tools/devtools-install) |
 
 You also need:
 
@@ -47,7 +46,7 @@ pac auth list           # Should show authenticated profile
 If you're not authenticated, run these commands:
 
 ```powershell
-pac auth create --url <Instance url>        # Authenticate to Power Platform
+pac auth create --environment <Instance url>        # Authenticate to Power Platform
 ```
 
 > [!TIP]
@@ -57,7 +56,7 @@ pac auth create --url <Instance url>        # Authenticate to Power Platform
 
 You can install the Power Pages plugin from the marketplace or from a local GitHub repository. If you use GitHub Copilot CLI, see the [Copilot CLI extensions documentation](https://docs.github.com/copilot/concepts/agents/copilot-cli/about-copilot-cli) for equivalent install steps. The commands below use Claude Code syntax.
 
-### Option 1: Install from marketplace (recommended)
+### Install from marketplace
 
 1. Open Claude Code in your terminal.
 
@@ -73,21 +72,11 @@ You can install the Power Pages plugin from the marketplace or from a local GitH
    /plugin install power-pages@power-platform-skills
    ```
 
-### Option 2: Install from GitHub
-
-If you have a local copy of the repository, point Claude Code to the plugin directory:
-
-1. Launch Claude Code with the plugin directory:
-
-   ```bash
-   claude --plugin-dir /path/to/power-platform-skills/plugins/power-pages
-   ```
-
-After installation, the plugin's nine skills are available as slash commands in your agent session.
+After installation, the plugin's skills are available as slash commands in your agent session.
 
 ## Skills overview
 
-The plugin provides nine skills that cover the full lifecycle of a Power Pages site. Each skill is invoked conversationally, either as a slash command or by describing what you want to do.
+The plugin provides skills that cover the full lifecycle of a Power Pages site. Each skill is invoked conversationally, either as a slash command or by describing what you want to do.
 
 | Skill | Command | What it does |
 |---|---|---|
@@ -95,7 +84,7 @@ The plugin provides nine skills that cover the full lifecycle of a Power Pages s
 | Deploy site | `/deploy-site` | Builds the project and uploads it to Power Pages using PAC CLI |
 | Activate site | `/activate-site` | Provisions a website record and assigns a public URL |
 | Set up data model | `/setup-datamodel` | Creates Dataverse tables, columns, and relationships |
-| Add sample data | `/add-sample-data` | Populates Dataverse tables with realistic test records |
+| Add sample data (Optional) | `/add-sample-data` | Populates Dataverse tables with realistic test records |
 | Integrate Web API | `/integrate-webapi` | Generates typed API client code, services, and table permissions |
 | Set up authentication | `/setup-auth` | Adds login/logout functionality and role-based access control |
 | Create web roles | `/create-webroles` | Generates web role YAML files for user access management |
@@ -173,7 +162,7 @@ The plugin spawns a **Data Model Architect** agent that:
 
 **You review and approve the proposal.** Nothing is created until you confirm. After approval, the plugin creates the tables and columns through API calls and saves a manifest file that Steps 5 and 6 use.
 
-### Step 5: Add sample data
+### Step 5: Add sample data (Optional)
 
 Run `/add-sample-data` to populate your tables with test records. Requires the data model from Step 4.
 
