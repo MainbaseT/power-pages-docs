@@ -13,7 +13,6 @@ contributors:
 
 # Get started with Power Pages plugin for Claude Code
 
-The Power Pages plugin for Claude Code enables AI-assisted development of Power Pages sites using modern single-page application (SPA) frameworks. With this plugin, you can create, configure, and deploy Power Pages sites through a conversational interface.
 The Power Pages plugin for Claude Code provides an AI-assisted workflow for creating, deploying, and managing Power Pages sites using modern [single-page application (SPA)](/power-pages/configure/create-code-sites) using modern frontend frameworks. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
 
 The plugin supports the full site development lifecycle through these conversational skills, from scaffolding a new site to deploying it, setting up Dataverse data models and configuring authentication.
@@ -87,11 +86,11 @@ After installation, the plugin's nine skills are available as slash commands in 
 
 ## Skills overview
 
-The plugin provides nine skills that cover the full lifecycle of a Power Pages code site. Each skill is invoked conversationally, either as a slash command or by describing what you want to do.
+The plugin provides nine skills that cover the full lifecycle of a Power Pages site. Each skill is invoked conversationally, either as a slash command or by describing what you want to do.
 
 | Skill | Command | What it does |
 |---|---|---|
-| Create site | `/create-site` | Scaffolds a code site, applies your design direction, builds pages and components |
+| Create site | `/create-site` | Scaffolds a site, applies your design direction, builds pages and components |
 | Deploy site | `/deploy-site` | Builds the project and uploads it to Power Pages using PAC CLI |
 | Activate site | `/activate-site` | Provisions a website record and assigns a public URL |
 | Set up data model | `/setup-datamodel` | Creates Dataverse tables, columns, and relationships |
@@ -160,14 +159,14 @@ The skill creates a complete SPA project, configures it for Power Pages, builds 
 
 1. Run the setup Dataverse skill:## Build your first site
 
-This walkthrough covers the full lifecycle of building a Power Pages code site with the plugin, from scaffolding through deployment. Each step describes what you say and what the plugin does in response.
+This walkthrough covers the full lifecycle of building a Power Pages site with the plugin, from scaffolding through deployment. Each step describes what you say and what the plugin does in response.
 
 > [!TIP]
 > You don't need to follow this exact order. Each skill checks its own prerequisites and tells you if something is missing. For example, you can run `/setup-auth` before `/integrate-webapi` if your site needs authentication first.
 
 ### Step 1: Create your site
 
-Describe the site you want in natural language — what it's for, what pages it needs, and any design preferences like color scheme, layout style, or fonts. Run `/create-site` or just describe your site and the plugin recognizes the intent.
+Describe the site you want in natural language what it's for, what pages it needs, and any design preferences like color scheme, layout style, or fonts. Run `/create-site` or just describe your site and the plugin recognizes the intent.
 
 The plugin asks you to pick a framework (React, Vue, Angular, or Astro) if you didn't specify one, then:
 
@@ -196,7 +195,7 @@ Run `/activate-site` to make the site publicly accessible. The plugin:
 1. Provisions a website record through the Power Platform API.
 1. Polls until the site is live and returns the public URL.
 
-At this point you have a working site at a public URL. The remaining steps add data, authentication, and SEO — skip any that don't apply to your site.
+At this point you have a working site at a public URL. The remaining steps add data, authentication, and SEO skip any that don't apply to your site.
 
 ### Step 4: Set up your data model (optional)
 
@@ -217,7 +216,7 @@ Run `/add-sample-data` to populate your tables with test records. Requires the d
 The plugin:
 
 1. Reads the manifest to understand your tables, columns, and relationships.
-1. Generates contextually appropriate values — realistic emails, plausible dates, formatted currency amounts — for each column type.
+1. Generates contextually appropriate values, realistic emails, plausible dates, formatted currency amounts for each column type.
 1. Inserts records in dependency order (parent tables before child tables) and refreshes authentication tokens automatically during bulk inserts.
 
 ### Step 6: Integrate with the Dataverse Web API (optional)
@@ -276,7 +275,7 @@ After you complete the skills, verify your Power Pages site works correctly.
 
 ## Tips and best practices
 
-The following tips help you get the most out of the plugin and Claude Code when building Power Pages code sites.
+The following tips help you get the most out of the plugin and Claude Code when building Power Pages sites.
 
 ### Paste errors directly with context
 
@@ -324,8 +323,7 @@ A common issue after deploying is a `403` error from the Power Pages Web API whe
 **Example: Column not enabled for Web API (403)**
 
 ```
-I'm getting a 403 error when the documents page loads. Here's the API
-call and the response. Fix the permissions so this column works.
+I'm getting a 403 error when the documents page loads. Here's the API call and the response. Fix the issue so this API works.
 
 URL:
 https://my-site.powerappsportals.com/_api/crd50_documents?$select=crd50_documentid,crd50_name,crd50_documentcategory,crd50_filetype,crd50_filesize,crd50_updateddate,crd50_description,_crd50_propertyid_value
