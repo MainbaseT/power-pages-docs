@@ -53,13 +53,6 @@ pac auth create --url <Instance url>        # Authenticate to Power Platform
 > [!TIP]
 > To get the instance URL, go to Power Pages home, select the **Settings** icon in the upper-right corner, and then select **Session details**.
 
-**Verify Power Platform Tools extension:**
-
-1. Open Visual Studio Code.
-1. Select **View** > **Extensions** or press **Ctrl+Shift+X**.
-1. Search for **Power Platform Tools**.
-1. Verify the extension is installed and enabled.
-
 ## Install the plugin
 
 You can install the Power Pages plugin from the Claude Code marketplace or from a local GitHub repository.
@@ -71,28 +64,62 @@ You can install the Power Pages plugin from the Claude Code marketplace or from 
 1. Add the Microsoft marketplace:
 
    ```bash
-   /plugin marketplace add microsoft/power-platform-claude-plugins
+   /plugin marketplace add microsoft/power-platform-skills
    ```
 
 1. Install the Power Pages plugin:
 
    ```bash
-   /plugin install power-pages@power-platform-claude-plugins
+   /plugin install power-pages@power-platform-skills
    ```
 
 ### Option 2: Install from GitHub
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/microsoft/power-platform-claude-plugins.git
-   ```
+If you have a local copy of the repository, point Claude Code to the plugin directory:
 
 1. Launch Claude Code with the plugin directory:
 
    ```bash
-   claude --plugin-dir /path/to/power-platform-claude-plugins/plugins/power-pages
+   claude --plugin-dir /path/to/power-platform-skills/plugins/power-pages
    ```
+
+After installation, the plugin's nine skills are available as slash commands in your Claude Code session.
+
+## Skills overview
+
+The plugin provides nine skills that cover the full lifecycle of a Power Pages code site. Each skill is invoked conversationally, either as a slash command or by describing what you want to do.
+
+| Skill | Command | What it does |
+|---|---|---|
+| Create site | `/create-site` | Scaffolds a code site, applies your design direction, builds pages and components |
+| Deploy site | `/deploy-site` | Builds the project and uploads it to Power Pages using PAC CLI |
+| Activate site | `/activate-site` | Provisions a website record and assigns a public URL |
+| Set up data model | `/setup-datamodel` | Creates Dataverse tables, columns, and relationships |
+| Add sample data | `/add-sample-data` | Populates Dataverse tables with realistic test records |
+| Integrate Web API | `/integrate-webapi` | Generates typed API client code, services, and table permissions |
+| Set up authentication | `/setup-auth` | Adds login/logout functionality and role-based access control |
+| Create web roles | `/create-webroles` | Generates web role YAML files for user access management |
+| Add SEO | `/add-seo` | Generates robots.txt, sitemap.xml, and meta tags |
+
+## Typical workflow
+
+A common end-to-end workflow follows this sequence:
+
+```
+1. /create-site       →  Scaffold, design, and build pages
+2. /deploy-site       →  Upload to your Power Pages environment
+3. /activate-site     →  Provision a public URL
+4. /setup-datamodel   →  Create Dataverse tables
+5. /add-sample-data   →  Populate tables with test records
+6. /integrate-webapi  →  Generate API client code and configure permissions
+7. /create-webroles   →  Define access roles
+8. /setup-auth        →  Add login/logout and role-based UI
+9. /add-seo           →  Search engine optimization
+10. /deploy-site      →  Push final changes live
+```
+
+> [!TIP]
+> You don't need to follow this exact order. Each skill checks its own prerequisites and tells you if something is missing. For example, you can run `/setup-auth` before `/integrate-webapi` if your site needs authentication first.
 
 ## Build your first site
 
@@ -131,133 +158,262 @@ The skill creates a complete SPA project, configures it for Power Pages, builds 
 
 ### Step 2: Add Dataverse tables
 
-1. Run the setup Dataverse skill:
+1. Run the setup Dataverse skill:## Build your first site
 
-   ```bash
-   /setup-dataverse
-   ```
+This walkthrough covers the full lifecycle of building a Power Pages code site with the plugin, from scaffolding through deployment. Each step describes what you say and what the plugin does in response.
 
-The skill analyzes your site for data patterns, designs an optimal schema, and creates tables with relationships.
+> [!TIP]
+> You don't need to follow this exact order. Each skill checks its own prerequisites and tells you if something is missing. For example, you can run `/setup-auth` before `/integrate-webapi` if your site needs authentication first.
 
-### Step 3: Configure Web API access
+### Step 1: Create your site
 
-1. Run the setup Web API skill:
+Describe the site you want in natural language — what it's for, what pages it needs, and any design preferences like color scheme, layout style, or fonts. Run `/create-site` or just describe your site and the plugin recognizes the intent.
 
-   ```bash
-   /setup-webapi
-   ```
+The plugin asks you to pick a framework (React, Vue, Angular, or Astro) if you didn't specify one, then:
 
-The skill creates site settings to enable API endpoints, configures web roles (Anonymous, Authenticated), sets up table permissions, and uploads configuration changes.
+1. Scaffolds the project from a template and applies your site name, colors, and design tokens.
+1. Installs dependencies, starts a development server, and opens a live browser preview.
+1. Builds out each page, component, and route you requested using real images from Unsplash.
+1. Creates git commits at significant milestones so you have built-in rollback history.
 
-### Step 4: Connect frontend to API
+### Step 2: Deploy your site
 
-1. Run the integrate Web API skill:
+Run `/deploy-site` to upload your site to Power Pages. The plugin:
 
-   ```bash
-   /integrate-webapi
-   ```
+1. Verifies that PAC CLI is installed and your authentication session is active.
+1. Confirms the target environment with you before proceeding.
+1. Runs a production build and uploads the compiled output.
+1. Creates a deployment artifacts directory if one doesn't already exist.
 
-The skill creates a Web API service layer, generates TypeScript interfaces, replaces mock data with API calls, and uploads the updated frontend.
+> [!NOTE]
+> If your environment blocks certain file attachments, the plugin detects the issue and provides instructions to resolve it.
 
-### Step 5: Add authentication (optional)
+### Step 3: Activate your site
 
-1. Run the setup auth skill:
+Run `/activate-site` to make the site publicly accessible. The plugin:
 
-   ```bash
-   /setup-auth
-   ```
+1. Suggests a subdomain based on your site name and lets you customize it.
+1. Provisions a website record through the Power Platform API.
+1. Polls until the site is live and returns the public URL.
 
-The skill adds login/logout functionality, creates role-based UI components, implements protected routes, and uploads the updated frontend.
+At this point you have a working site at a public URL. The remaining steps add data, authentication, and SEO — skip any that don't apply to your site.
+
+### Step 4: Set up your data model (optional)
+
+Run `/setup-datamodel` to create the Dataverse tables your site needs. If you already have an ER diagram or specific schema, provide it directly instead of having the agent analyze your code.
+
+The plugin spawns a **Data Model Architect** agent that:
+
+1. Analyzes your site's code to determine what data the pages and components require.
+1. Queries your Dataverse environment for existing tables to avoid duplicates.
+1. Proposes a data model with tables, columns, data types, and relationships, visualized as an ER diagram.
+
+**You review and approve the proposal.** Nothing is created until you confirm. After approval, the plugin creates the tables and columns through API calls and saves a manifest file that Steps 5 and 6 use.
+
+### Step 5: Add sample data (optional)
+
+Run `/add-sample-data` to populate your tables with test records. Requires the data model from Step 4.
+
+The plugin:
+
+1. Reads the manifest to understand your tables, columns, and relationships.
+1. Generates contextually appropriate values — realistic emails, plausible dates, formatted currency amounts — for each column type.
+1. Inserts records in dependency order (parent tables before child tables) and refreshes authentication tokens automatically during bulk inserts.
+
+### Step 6: Integrate with the Dataverse Web API (optional)
+
+Run `/integrate-webapi` to replace mock data with live Dataverse queries. Requires the data model from Step 4.
+
+The plugin:
+
+1. Scans your codebase for components using mock data, placeholder fetch calls, or hardcoded arrays, and maps them to your Dataverse tables.
+1. Spawns a **Web API Integration** agent for each table that generates:
+   - A shared API client with anti-forgery token management and retry logic.
+   - TypeScript entity types and domain mappers.
+   - A CRUD service layer.
+   - Framework-specific patterns (React hooks, Vue composables, or Angular services).
+1. Spawns a **Permissions Architect** agent that proposes table permissions and site settings.
+
+**You review and approve the permissions proposal.** No configuration files are created until you confirm.
+
+### Step 7: Create web roles (optional)
+
+Run `/create-webroles` to define user access roles. The plugin:
+
+1. Queries your environment for existing web roles to avoid duplicates.
+1. Generates role definitions with unique identifiers.
+1. Enforces that each site has at most one anonymous role and one authenticated role.
+
+### Step 8: Set up authentication (optional)
+
+Run `/setup-auth` to add login and logout functionality. The plugin:
+
+1. Generates an authentication service for the Entra ID flow with anti-forgery token management.
+1. Creates a login/logout UI component integrated with your site layout.
+1. Adds role-based access control utilities that show or hide UI elements based on the user's web roles.
+1. Uses your framework's patterns throughout (React hooks, Vue composables, or Angular services).
+
+### Step 9: Add SEO (optional)
+
+Run `/add-seo` to optimize your site for search engines. The plugin:
+
+1. Discovers routes from your framework's router configuration.
+1. Generates search engine directives and a sitemap for all discovered routes.
+1. Adds meta tags: viewport, charset, description, Open Graph, Twitter Card, and favicon references.
+
+### Step 10: Deploy the final site
+
+If you performed any optional steps, run `/deploy-site` again to push the changes live. The plugin runs a production build and uploads the site along with all deployment artifacts (table permissions, site settings, web roles) to your Power Pages environment.
 
 ### Verify your site
 
 After you complete the skills, verify your Power Pages site works correctly.
 
 1. Go to [Power Pages](https://make.powerpages.microsoft.com/).
-
 1. Locate your site in the **Active sites** list.
-
 1. Preview your site on desktop with the **Preview** option.
-
 1. Test the functionality.
 
-## Example: Complete workflow
+## Tips and best practices
 
-The following example shows a typical session that creates a product catalog site.
+The following tips help you get the most out of the plugin and Claude Code when building Power Pages code sites.
 
-```text
-User: /create-site
+### Paste errors directly with context
 
-Claude: What kind of site would you like to create?
+When something fails, whether it's a build error, a deployment failure, or a runtime exception in the browser, copy the full error output and paste it into Claude Code along with a brief description of what you were doing. The more context you provide, the faster the fix.
 
-User: A product catalog with categories, search, and a contact form
+**Example: Build error**
 
-Claude: [Creates React site with products, categories, contact form]
-        [Uploads to Power Pages]
-        Site created! URL: https://my-site.powerappsportals.com
+```
+I ran npm run build and got this error. Fix it.
 
-User: /setup-dataverse
+error TS2339: Property 'jobTitle' does not exist on type 'JobPosting'.
 
-Claude: [Analyzes site, detects products, categories, contact submissions]
-        [Creates tables with relationships]
-        Tables created: cr_product, cr_category, cr_contactsubmission
-
-User: /setup-webapi
-
-Claude: [Creates site settings, web roles, table permissions]
-        [Uploads configuration]
-        Web API configured for all tables
-
-User: /integrate-webapi
-
-Claude: [Creates API services, replaces mock data]
-        [Uploads updated frontend]
-        Frontend now connected to Dataverse!
-
-User: /add-sample-data
-
-Claude: [Inserts 4 categories, 10 products, 3 sample submissions]
-        Sample data inserted successfully
+  src/components/JobCard.tsx:24:31
+    24   <Text>{posting.jobTitle}</Text>
+                                 ~~~~~~~~
 ```
 
-## Skills reference
+**Example: Deployment failure**
 
-The plugin provides eight skills organized into core workflows and optional enhancements.
+```
+/deploy-site failed with this error. The site was working locally.
 
-### Core skills
+Error: pac pages upload-code-site failed with exit code 1
+"Web file creation failed: File extension .js is not allowed"
+```
 
-| Skill | Command | Description |
-|-------|---------|-------------|
-| Create site | `/create-site` | Create Power Pages SPA sites using React, Angular, Vue, or Astro |
-| Setup Dataverse | `/setup-dataverse` | Create Dataverse tables, columns, and relationships |
-| Setup Web API | `/setup-webapi` | Configure table permissions, web roles, and site settings |
-| Integrate Web API | `/integrate-webapi` | Connect frontend code to Power Pages Web API |
-| Setup auth | `/setup-auth` | Implement sign-in/sign-out and role-based access control |
+**Example: Browser console error**
 
-### Enhancement skills
+```
+The job listings page shows a blank screen after I integrated the Web API.
+Here's the browser console error:
 
-| Skill | Command | Description |
-|-------|---------|-------------|
-| Add SEO | `/add-seo` | Add SEO assets (meta tags, robots.txt, sitemap.xml, favicon) |
-| Add tests | `/add-tests` | Add unit tests (Vitest) and E2E tests (Playwright) |
-| Add sample data | `/add-sample-data` | Insert sample data with proper foreign key relationships |
+Access to XMLHttpRequest at 'https://myorg.crm.dynamics.com/_api/cr_jobpostings'
+from origin 'https://mysite.powerpages.microsoftcrmportals.com' has been blocked
+by CORS policy: No 'Access-Control-Allow-Origin' header is present.
+```
 
-### Recommended workflow
+> [!TIP]
+> Include the file name, the command you ran, and what you expected to happen. Claude Code uses this context to locate the problem and apply a targeted fix rather than guessing.
 
-For a complete Power Pages SPA site implementation, run the skills in the following order.
+### Share Web API errors with the full request URL
 
-:::image type="content" source="media/workflow-diagram.png" alt-text="Diagram showing the recommended workflow: create-site, setup-dataverse, setup-webapi, integrate-webapi, setup-auth.":::
+A common issue after deploying is a `403` error from the Power Pages Web API when a column isn't enabled for API access. When you hit this error, paste the **full API URL** and the **complete JSON error response** into Claude Code. The error message tells you exactly which table and column need to be fixed, and Claude Code can update the table permission YAML and site settings for you.
 
-1. `/create-site` - Create SPA with your chosen framework
-1. `/setup-dataverse` - Design and create Dataverse tables
-1. `/setup-webapi` - Configure Web API permissions
-1. `/integrate-webapi` - Connect frontend to Web API
-1. `/setup-auth` - Add authentication (optional)
+**Example: Column not enabled for Web API (403)**
 
-After each core skill, you can optionally run enhancement skills:
+```
+I'm getting a 403 error when the documents page loads. Here's the API
+call and the response. Fix the permissions so this column works.
 
-- After `/create-site`: Run `/add-seo` and `/add-tests`
-- After `/setup-dataverse`: Run `/add-sample-data`
+URL:
+https://my-site.powerappsportals.com/_api/crd50_documents?$select=crd50_documentid,crd50_name,crd50_documentcategory,crd50_filetype,crd50_filesize,crd50_updateddate,crd50_description,_crd50_propertyid_value
+
+Response:
+{
+  "error": {
+    "code": "90040101",
+    "message": "Attribute _crd50_propertyid_value in table crd50_document is not enabled for Web Api.",
+    "innererror": {
+      "code": "90040101",
+      "message": "Attribute _crd50_propertyid_value in table crd50_document is not enabled for Web Api.",
+      "type": "AttributePermissionIsMissing"
+    }
+  }
+}
+```
+
+This error (`AttributePermissionIsMissing`) means the lookup column `_crd50_propertyid_value` exists in the Dataverse table but isn't listed in the table permission configuration for the Web API. Claude Code resolves this by adding the missing column to the table permission YAML in `.powerpages-site/table-permissions/` and redeploying.
+
+> [!NOTE]
+> Power Pages Web API requires every column returned by an API call to be explicitly listed in the table permission. Lookup columns (prefixed with `_` and suffixed with `_value`) are easy to miss because their API name differs from the column's logical name in Dataverse. When you see `AttributePermissionIsMissing`, the fix is always to add that column to the table permission, not to change the API query.
+
+### Be specific about what you want
+
+Vague requests produce vague results. Tell the plugin exactly what you need, including layout preferences, data fields, and behavior.
+
+| Instead of | Try |
+|---|---|
+| "Make a page for jobs" | "Create a job listings page with a search bar at the top, filter chips for location and department, and a card grid showing title, company, salary range, and a posted date for each job" |
+| "Fix the styling" | "The job cards are stacking vertically on desktop. Make them display in a 3-column grid with 16px gap on screens wider than 768px" |
+| "Add some data" | "Add 20 sample job postings across 4 departments (Engineering, Marketing, Sales, HR) with realistic titles, salary ranges between $60k-$180k, and posted dates in the last 30 days" |
+| "Set up the API" | "Connect the JobListings component to the cr_jobposting Dataverse table. Replace the hardcoded array with a real API call that fetches title, department, salary, and posted date" |
+
+### Use screenshots for visual issues
+
+When the site doesn't look right in the browser, take a screenshot and share it with Claude Code. You can paste a screenshot directly into the conversation or provide a file path. Visual context helps identify layout, spacing, and styling issues that are hard to describe in text.
+
+```
+The header overlaps the hero section on mobile. Here's a screenshot:
+
+[paste screenshot or provide path to screenshot file]
+
+Fix the header so it doesn't overlap. It should be a fixed header with
+the content starting below it.
+```
+
+### Iterate in small steps
+
+Rather than describing an entire site in one prompt, build incrementally. Start with the structure and layout, then add features one at a time. This approach gives you a chance to review and course-correct at each step.
+
+```
+Step 1: /create-site → Get the basic scaffold and layout right
+Step 2: "Add a hero section to the home page with a search bar"
+Step 3: "Add a job listings page with filter and sort"
+Step 4: "Add a job detail page that shows full description"
+Step 5: /setup-datamodel → Create tables now that you know the data shape
+Step 6: /integrate-webapi → Wire up real data
+```
+
+> [!TIP]
+> After each step, check the browser preview. If something isn't right, fix it before moving on. It's easier to fix issues in one component than to untangle problems across an entire site.
+
+### Review agent proposals before approving
+
+The Data Model Architect and Web API Permissions Architect agents present proposals before making changes. Take the time to review these proposals carefully.
+
+- **Data model proposals**: Check that table names, column types, and relationships match your business requirements. It's much easier to adjust a proposal than to rename columns after data is already inserted.
+- **Permissions proposals**: Verify that each role has the correct access level (create, read, update, delete) for each table. Overly permissive table permissions are a common security risk.
+
+### Ask Claude Code to explain before changing
+
+When you're unsure about a proposed change, especially for permissions, data model modifications, or authentication configuration, ask Claude Code to explain what it plans to do and why before approving.
+
+```
+Before you create the table permissions, explain what access each role
+will have and why. I want to understand the security implications.
+```
+
+### Run skills independently to recover from issues
+
+If a skill fails partway through, you don't need to start over. Each skill is designed to run independently and can pick up where things left off. For example, if `/integrate-webapi` fails on the third table, you can re-run it and it will detect the work already completed.
+
+```
+/integrate-webapi failed while processing the cr_applications table.
+Here's the error: [paste error]. Resume the integration from where it stopped.
+```
+
 
 ### Related content
 
