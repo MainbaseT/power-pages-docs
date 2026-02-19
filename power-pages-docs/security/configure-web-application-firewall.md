@@ -25,7 +25,6 @@ You'll need the following before configuring WAF for your Power Pages website.
 - Website must be in Production application type, trial sites aren't supported.
 
 > [!NOTE]
-> - [Restricting website access by IP address](../admin/ip-address-restrict.md) on a site is currently not supported using Content Delivery Network.
 > - This service isn't available in Singapore Local, China and the UAE region.
 > - The Web Application Firewall option is enabled by default when converting a trial site to production. Administrator can choose to opt out before starting the conversion process.
   
