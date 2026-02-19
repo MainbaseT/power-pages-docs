@@ -3,7 +3,7 @@ title: Configure Web Application Firewall for Power Pages
 description: Learn how to configure Web Application Firewall on Power Pages.
 author: DanaMartens
 ms.topic: how-to
-ms.date: 02/19/2023
+ms.date: 02/19/2026
 ms.author: bipuldeora
 ms.reviewer: danamartens
 contributors:
@@ -22,11 +22,11 @@ Web Application Firewall (WAF) is available for production sites created using P
 You'll need the following before configuring WAF for your Power Pages website.
 
 - You must be an administrator to configure Web Application Firewall.
-- Website must be in Production application type, trial sites aren't supported.
+- The website must be in the Production application type. Trial sites aren't supported.
 
 > [!NOTE]
 > - This service isn't available in Singapore Local, China and the UAE region.
-> - The Web Application Firewall option is enabled by default when converting a trial site to production. Administrator can choose to opt out before starting the conversion process.
+> - The **Web Application Firewall** option is enabled by default when you convert a trial site to production. Administrator can choose to opt out before starting the conversion process.
   
 ## Enable Web Application Firewall for Power Pages sites
 
