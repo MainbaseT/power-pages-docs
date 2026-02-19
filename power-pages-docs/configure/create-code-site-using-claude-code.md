@@ -11,9 +11,9 @@ contributors:
 - shwetamurkute
 ---
 
-# Get started with Power Pages plugin for Claude Code
+# Get started with the Power Pages plugin for GitHub Copilot CLI and Claude Code
 
-The Power Pages plugin for Claude Code provides an AI-assisted workflow for creating, deploying, and managing Power Pages sites using modern [single-page application (SPA)](/power-pages/configure/create-code-sites) using modern frontend frameworks. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
+The Power Pages plugin for [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and [Claude Code](https://claude.ai/code) provides an AI-assisted workflow for creating, deploying, and managing Power Pages sites using modern [single-page application (SPA)](/power-pages/configure/create-code-sites) using modern frontend frameworks. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
 
 The plugin supports the full site development lifecycle through these conversational skills, from scaffolding a new site to deploying it, setting up Dataverse data models and configuring authentication.
 
@@ -30,6 +30,7 @@ Before you begin, verify that you have the required software and permissions.
 | Power Platform Tools extension | Latest | [Install Power Platform Tools](/power-platform/developer/tools/devtools-install) |
 | Power Platform CLI (PAC CLI) | Latest | [Install PAC CLI](/power-platform/developer/cli/introduction) |
 | Azure CLI | Latest | [Install Azure CLI](/cli/azure/install-azure-cli) |
+| GitHub Copilot CLI or Claude Code | Latest | [GitHub Copilot CLI](https://github.com/features/copilot/cli/) \| [Claude Code](https://claude.ai/code) |
 
 You also need:
 
@@ -54,7 +55,7 @@ pac auth create --url <Instance url>        # Authenticate to Power Platform
 
 ## Install the plugin
 
-You can install the Power Pages plugin from the Claude Code marketplace or from a local GitHub repository.
+You can install the Power Pages plugin from the marketplace or from a local GitHub repository. If you use GitHub Copilot CLI, see the [Copilot CLI extensions documentation](https://docs.github.com/copilot/concepts/agents/copilot-cli/about-copilot-cli) for equivalent install steps. The commands below use Claude Code syntax.
 
 ### Option 1: Install from marketplace (recommended)
 
@@ -82,7 +83,7 @@ If you have a local copy of the repository, point Claude Code to the plugin dire
    claude --plugin-dir /path/to/power-platform-skills/plugins/power-pages
    ```
 
-After installation, the plugin's nine skills are available as slash commands in your Claude Code session.
+After installation, the plugin's nine skills are available as slash commands in your agent session.
 
 ## Skills overview
 
@@ -238,11 +239,11 @@ After you complete the skills, verify your Power Pages site works correctly.
 
 ## Tips and best practices
 
-The following tips help you get the most out of the plugin and Claude Code when building Power Pages sites.
+The following tips help you get the most out of the plugin when building Power Pages sites.
 
 ### Paste errors directly with context
 
-When something fails, whether it's a build error, a deployment failure, or a runtime exception in the browser, copy the full error output and paste it into Claude Code along with a brief description of what you were doing. The more context you provide, the faster the fix.
+When something fails, whether it's a build error, a deployment failure, or a runtime exception in the browser, copy the full error output and paste it along with a brief description of what you were doing. The more context you provide, the faster the fix.
 
 **Example: Build error**
 
@@ -257,11 +258,11 @@ error TS2339: Property 'jobTitle' does not exist on type 'JobPosting'.
 ```
 
 > [!TIP]
-> Include the file name, the command you ran, and what you expected to happen. Claude Code uses this context to locate the problem and apply a targeted fix rather than guessing.
+> Include the file name, the command you ran, and what you expected to happen. The plugin uses this context to locate the problem and apply a targeted fix rather than guessing.
 
 ### Share Web API errors with the full request URL
 
-A common issue after deploying is a `403` error from the Power Pages Web API when a column isn't enabled for API access. When you hit this error, paste the **full API URL** and the **complete JSON error response** into Claude Code. The error message tells you exactly which table and column need to be fixed, and Claude Code can update the table permission YAML and site settings for you.
+A common issue after deploying is a `403` error from the Power Pages Web API when a column isn't enabled for API access. When you hit this error, paste the **full API URL** and the **complete JSON error response**. The error message tells you exactly which table and column need to be fixed, and the plugin can update the table permission YAML and site settings for you.
 
 **Example: Column not enabled for Web API (403)**
 
@@ -285,7 +286,7 @@ Response:
 }
 ```
 
-This error (`AttributePermissionIsMissing`) means the lookup column `_crd50_propertyid_value` exists in the Dataverse table but isn't listed in the table permission configuration for the Web API. Claude Code resolves this by adding the missing column to the table permission YAML in `.powerpages-site/table-permissions/` and redeploying.
+This error (`AttributePermissionIsMissing`) means the lookup column `_crd50_propertyid_value` exists in the Dataverse table but isn't listed in the table permission configuration for the Web API. The plugin resolves this by adding the missing column to the table permission YAML in `.powerpages-site/table-permissions/` and redeploying.
 
 > [!NOTE]
 > Power Pages Web API requires every column returned by an API call to be explicitly listed in the table permission. Lookup columns (prefixed with `_` and suffixed with `_value`) are easy to miss because their API name differs from the column's logical name in Dataverse. When you see `AttributePermissionIsMissing`, the fix is always to add that column to the table permission, not to change the API query.
@@ -303,7 +304,7 @@ Vague requests produce vague results. Tell the plugin exactly what you need, inc
 
 ### Use screenshots for visual issues
 
-When the site doesn't look right in the browser, take a screenshot and share it with Claude Code. You can paste a screenshot directly into the conversation or provide a file path. Visual context helps identify layout, spacing, and styling issues that are hard to describe in text.
+When the site doesn't look right in the browser, take a screenshot and paste it directly into the conversation or provide a file path. Visual context helps identify layout, spacing, and styling issues that are hard to describe in text.
 
 ```
 The header overlaps the hero section on mobile. Here's a screenshot:
@@ -336,9 +337,9 @@ The Data Model Architect and Web API Permissions Architect agents present propos
 - **Data model proposals**: Check that table names, column types, and relationships match your business requirements. It's much easier to adjust a proposal than to rename columns after data is already inserted.
 - **Permissions proposals**: Verify that each role has the correct access level (create, read, update, delete) for each table. Overly permissive table permissions are a common security risk.
 
-### Ask Claude Code to explain before changing
+### Ask for an explanation before approving
 
-When you're unsure about a proposed change, especially for permissions, data model modifications, or authentication configuration, ask Claude Code to explain what it plans to do and why before approving.
+When you're unsure about a proposed change, especially for permissions, data model modifications, or authentication configuration, ask the plugin to explain what it plans to do and why before approving.
 
 ```
 Before you create the table permissions, explain what access each role will have and why. I want to understand the security implications.
@@ -349,8 +350,7 @@ Before you create the table permissions, explain what access each role will have
 If a skill fails partway through, you don't need to start over. Each skill is designed to run independently and can pick up where things left off. For example, if `/integrate-webapi` fails on the third table, you can re-run it and it will detect the work already completed.
 
 ```
-/integrate-webapi failed while processing the cr_applications table.
-Here's the error: [paste error]. Resume the integration from where it stopped.
+/integrate-webapi failed while processing the cr_applications table. Here's the error: [paste error]. Resume the integration from where it stopped.
 ```
 
 
@@ -359,4 +359,5 @@ Here's the error: [paste error]. Resume the integration from where it stopped.
 - [Create and deploy a single-page application in Power Pages](https://learn.microsoft.com/en-us/power-pages/configure/create-code-sites)
 - [Power Pages Web API reference](https://learn.microsoft.com/en-us/power-pages/configure/web-api-overview)
 - [PAC CLI pages command reference](https://learn.microsoft.com/en-us/power-pages/configure/power-platform-cli)
-
+- [GitHub Copilot CLI](https://github.com/features/copilot/cli/)
+- [Claude Code](https://claude.ai/code)
