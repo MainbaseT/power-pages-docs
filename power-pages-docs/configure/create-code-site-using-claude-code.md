@@ -11,11 +11,16 @@ contributors:
 - shwetamurkute
 ---
 
-# Get started with the Power Pages plugin for GitHub Copilot CLI and Claude Code
+# Get started with the Power Pages plugin for GitHub Copilot CLI and Claude Code (preview)
 
 The Power Pages plugin for [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and [Claude Code](https://claude.ai/code) provides an AI-assisted workflow for creating, deploying, and managing modern [single-page application (SPA)](/power-pages/configure/create-code-sites) sites on Power Pages. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
 
 The plugin supports the full site development lifecycle through these conversational skills, from scaffolding a new site to deploying it, setting up Dataverse data models and configuring authentication.
+
+> [!IMPORTANT]
+> - This feature is a preview feature.
+> - [!INCLUDE [preview-tags](../includes/cc-preview-features-definition.md)]
+> - 
 
 ## Prerequisites
 
