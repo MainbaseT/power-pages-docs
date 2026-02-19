@@ -30,7 +30,7 @@ Before you begin, verify that you have the required software and permissions.
 | Power Platform Tools extension | Latest | [Install Power Platform Tools](/power-platform/developer/tools/devtools-install) |
 | Power Platform CLI (PAC CLI) | Latest | [Install PAC CLI](/power-platform/developer/cli/introduction) |
 | Azure CLI | Latest | [Install Azure CLI](/cli/azure/install-azure-cli) |
-| GitHub Copilot CLI or Claude Code | Latest | [GitHub Copilot CLI](https://github.com/features/copilot/cli/) \| [Claude Code](https://claude.ai/code) |
+| GitHub Copilot CLI or Claude Code | Latest | [GitHub Copilot CLI](https://github.com/features/copilot/cli/) or [Claude Code](https://claude.ai/code) |
 
 You also need:
 
