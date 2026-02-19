@@ -256,26 +256,6 @@ error TS2339: Property 'jobTitle' does not exist on type 'JobPosting'.
                                  ~~~~~~~~
 ```
 
-**Example: Deployment failure**
-
-```
-/deploy-site failed with this error. The site was working locally.
-
-Error: pac pages upload-code-site failed with exit code 1
-"Web file creation failed: File extension .js is not allowed"
-```
-
-**Example: Browser console error**
-
-```
-The job listings page shows a blank screen after I integrated the Web API.
-Here's the browser console error:
-
-Access to XMLHttpRequest at 'https://myorg.crm.dynamics.com/_api/cr_jobpostings'
-from origin 'https://mysite.powerpages.microsoftcrmportals.com' has been blocked
-by CORS policy: No 'Access-Control-Allow-Origin' header is present.
-```
-
 > [!TIP]
 > Include the file name, the command you ran, and what you expected to happen. Claude Code uses this context to locate the problem and apply a targeted fix rather than guessing.
 
@@ -330,8 +310,7 @@ The header overlaps the hero section on mobile. Here's a screenshot:
 
 [paste screenshot or provide path to screenshot file]
 
-Fix the header so it doesn't overlap. It should be a fixed header with
-the content starting below it.
+Fix the header so it doesn't overlap. It should be a fixed header with the content starting below it.
 ```
 
 ### Iterate in small steps
@@ -362,8 +341,7 @@ The Data Model Architect and Web API Permissions Architect agents present propos
 When you're unsure about a proposed change, especially for permissions, data model modifications, or authentication configuration, ask Claude Code to explain what it plans to do and why before approving.
 
 ```
-Before you create the table permissions, explain what access each role
-will have and why. I want to understand the security implications.
+Before you create the table permissions, explain what access each role will have and why. I want to understand the security implications.
 ```
 
 ### Run skills independently to recover from issues
