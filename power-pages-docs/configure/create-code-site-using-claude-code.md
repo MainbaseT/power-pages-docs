@@ -235,6 +235,13 @@ After you complete the skills, verify your Power Pages site works correctly.
 
 The following tips help you get the most out of the plugin when building Power Pages sites.
 
+### Review agent proposals before approving
+
+The Data Model Architect and Web API Permissions Architect agents present proposals before making changes. Take the time to review these proposals carefully.
+
+- **Data model proposals**: Check that table names, column types, and relationships match your business requirements. It's much easier to adjust a proposal than to rename columns after data is already inserted.
+- **Permissions proposals**: Verify that each role has the correct access level (create, read, update, delete) for each table. Overly permissive table permissions are a common security risk.
+
 ### Paste errors directly with context
 
 When something fails, whether it's a build error, a deployment failure, or a runtime exception in the browser, copy the full error output and paste it along with a brief description of what you were doing. The more context you provide, the faster the fix.
@@ -323,13 +330,6 @@ Step 6: /integrate-webapi → Wire up real data
 
 > [!TIP]
 > After each step, check the browser preview. If something isn't right, fix it before moving on. It's easier to fix issues in one component than to untangle problems across an entire site.
-
-### Review agent proposals before approving
-
-The Data Model Architect and Web API Permissions Architect agents present proposals before making changes. Take the time to review these proposals carefully.
-
-- **Data model proposals**: Check that table names, column types, and relationships match your business requirements. It's much easier to adjust a proposal than to rename columns after data is already inserted.
-- **Permissions proposals**: Verify that each role has the correct access level (create, read, update, delete) for each table. Overly permissive table permissions are a common security risk.
 
 ### Ask for an explanation before approving
 
