@@ -1,6 +1,6 @@
 ---
 title: Tutorial on how to create and configure single-page application using agentic AI coding tool
-description: This page provides a walk-through on how to create, customize, and deploy single-page applications for Microsoft Power Pages using using agentic AI coding tool.
+description: This page provides a walk-through on how to create, customize, and deploy single-page applications for Microsoft Power Pages using agentic AI coding tool.
 author: neerajnandwana-msft
 ms.topic: tutorial
 ms.date: 02/20/2026
