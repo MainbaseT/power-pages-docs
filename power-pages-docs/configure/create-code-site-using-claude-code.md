@@ -99,18 +99,18 @@ The plugin provides skills that cover the full lifecycle of a Power Pages site. 
 
 A common end-to-end workflow follows this sequence:
 
-```
-1. /create-site       →  Scaffold, design, and build pages
-2. /deploy-site       →  Upload to your Power Pages environment
-3. /activate-site     →  Provision a public URL
-4. /setup-datamodel   →  Create Dataverse tables
-5. /add-sample-data   →  Populate tables with test records
-6. /integrate-webapi  →  Generate API client code and configure permissions
-7. /create-webroles   →  Define access roles
-8. /setup-auth        →  Add sign-in/sign-out and role-based UI
-9. /add-seo           →  Search engine optimization
-10. /deploy-site      →  Push final changes live
-```
+
+1. /create-site       :  Scaffold, design, and build pages
+2. /deploy-site       :  Upload to your Power Pages environment
+3. /activate-site     :  Provision a public URL
+4. /setup-datamodel   :  Create Dataverse tables
+5. /add-sample-data   :  Populate tables with test records
+6. /integrate-webapi  :  Generate API client code and configure permissions
+7. /create-webroles   :  Define access roles
+8. /setup-auth        :  Add sign-in/sign-out and role-based UI
+9. /add-seo           :  Search engine optimization
+10. /deploy-site      :  Push final changes live
+
 
 > [!TIP]
 > You don't need to follow this exact order. Each skill checks its own prerequisites and tells you if something is missing. For example, you can run `/setup-auth` before `/integrate-webapi` if your site needs authentication first.
@@ -258,7 +258,7 @@ error TS2339: Property 'jobTitle' does not exist on type 'JobPosting'.
 
   src/components/JobCard.tsx:24:31
     24   <Text>{posting.jobTitle}</Text>
-                                 ~~~~~~~~
+                                 
 ```
 
 > [!TIP]
@@ -322,14 +322,14 @@ Fix the header so it doesn't overlap. It should be a fixed header with the conte
 
 Rather than describing an entire site in one prompt, build incrementally. Start with the structure and layout, then add features one at a time. This approach gives you a chance to review and course-correct at each step.
 
-```
+
 Step 1: /create-site → Get the basic scaffold and layout right
 Step 2: "Add a hero section to the home page with a search bar"
 Step 3: "Add a job listings page with filter and sort"
 Step 4: "Add a job detail page that shows full description"
 Step 5: /setup-datamodel → Create tables now that you know the data shape
 Step 6: /integrate-webapi → Wire up real data
-```
+
 
 > [!TIP]
 > After each step, check the browser preview. If something isn't right, fix it before moving on. It's easier to fix problems in one component than to untangle problems across an entire site.
