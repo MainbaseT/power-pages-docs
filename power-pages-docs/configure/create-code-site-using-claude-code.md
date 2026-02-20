@@ -3,7 +3,7 @@ title: Tutorial on how to create and configure single-page application using age
 description: This page provides a walk-through on how to create, customize, and deploy single-page applications for Microsoft Power Pages using using agentic AI coding tool.
 author: neerajnandwana-msft
 ms.topic: tutorial
-ms.date: 02/06/2026
+ms.date: 02/20/2026
 ms.author: nenandw
 ms.reviewer: smurkute
 contributors:
@@ -11,7 +11,7 @@ contributors:
 - shwetamurkute
 ---
 
-# Get started with the Power Pages plugin for GitHub Copilot CLI and Claude Code (preview)
+# Tutorial: Create and deploy a single-page application using GitHub Copilot CLI and Claude Code (preview)
 
 The Power Pages plugin for [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and [Claude Code](https://claude.ai/code) provides an AI-assisted workflow for creating, deploying, and managing modern [*single-page application (SPA)*](/power-pages/configure/create-code-sites) sites on Power Pages. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
 
@@ -39,7 +39,7 @@ Before you begin, verify that you have the required software and permissions.
 You also need:
 
 - A Power Platform environment with Power Pages enabled.
-- An authenticated PAC CLI session connected to your target environment. Run `pac auth create` if you haven't connected yet.
+- An authenticated PAC CLI session connected to your target environment. Run `pac auth create` if you didn't connect yet.
 - An Azure CLI session signed in to the same tenant. Run `az login` to authenticate.
 
 **Verify authentication:**
@@ -81,7 +81,7 @@ After installation, the plugin's skills are available as slash commands in your 
 
 ## Skills overview
 
-The plugin provides skills that cover the full lifecycle of a Power Pages site. Each skill is invoked conversationally, either as a slash command or by describing what you want to do.
+The plugin provides skills that cover the full lifecycle of a Power Pages site. Invoke each skill conversationally, either as a slash command or by describing what you want to do.
 
 | Skill | Command | What it does |
 |---|---|---|
@@ -140,7 +140,7 @@ Run `/deploy-site` to upload your site to Power Pages. The plugin:
 1. Creates a deployment artifacts directory if one doesn't already exist.
 
 > [!NOTE]
-> If your environment blocks certain file attachments, the plugin detects the issue and provides instructions to resolve it.
+> If your environment blocks certain file attachments, the plugin detects the problem and provides instructions to resolve it.
 
 ### Step 3: Activate your site
 
@@ -166,9 +166,9 @@ The plugin spawns a **Data Model Architect** agent that:
 
 ### Step 5: Add sample data (Optional)
 
-Run `/add-sample-data` to populate your tables with test records. Requires the data model from Step 4.
+Run `/add-sample-data` to populate your tables with test records. This step requires the data model from Step 4.
 
-The plugin:
+The plugin performs the following actions:
 
 1. Reads the manifest to understand your tables, columns, and relationships.
 1. Generates contextually appropriate values for each column type: realistic emails, plausible dates, and formatted currency amounts.
@@ -176,11 +176,11 @@ The plugin:
 
 ### Step 6: Integrate with the Dataverse Web API
 
-Run `/integrate-webapi` to replace mock data with live Dataverse queries. Requires the data model from Step 4.
+Run `/integrate-webapi` to replace mock data with live Dataverse queries. This step requires the data model from Step 4.
 
-The plugin:
+The plugin performs the following actions:
 
-1. Scans your codebase for components using mock data, placeholder fetch calls, or hardcoded arrays, and maps them to your Dataverse tables.
+1. Scans your codebase for components that use mock data, placeholder fetch calls, or hardcoded arrays. It maps these components to your Dataverse tables.
 1. Spawns a **Web API Integration** agent for each table that generates:
    - A shared API client with anti-forgery token management and retry logic.
    - TypeScript entity types and domain mappers.
@@ -188,7 +188,7 @@ The plugin:
    - Framework-specific patterns (React hooks, Vue composables, or Angular services).
 1. Spawns a **Permissions Architect** agent that proposes table permissions and site settings.
 
-**You review and approve the permissions proposal.** No configuration files are created until you confirm.
+**You review and approve the permissions proposal.** The plugin doesn't create any configuration files until you confirm.
 
 ### Step 7: Create web roles
 
@@ -225,7 +225,7 @@ After you complete the skills, verify your Power Pages site works correctly.
 
 1. Go to [Power Pages](https://make.powerpages.microsoft.com/).
 1. Locate your site in the **Active sites** list.
-1. Preview your site on desktop with the **Preview** option.
+1. Preview your site on desktop by using the **Preview** option.
 1. Test the functionality.
 
 ## Tips and best practices
@@ -247,7 +247,7 @@ The Data Model Architect and Web API Permissions Architect agents present propos
 
 ### Paste errors directly with context
 
-When something fails, whether it's a build error, a deployment failure, or a runtime exception in the browser, copy the full error output and paste it along with a brief description of what you were doing. The more context you provide, the faster the fix.
+When something fails, whether it's a build error, a deployment failure, or a runtime exception in the browser, copy the full error output. Paste it along with a brief description of what you were doing. The more context you provide, the faster the fix.
 
 **Example: Build error**
 
@@ -266,7 +266,7 @@ error TS2339: Property 'jobTitle' does not exist on type 'JobPosting'.
 
 ### Share Web API errors with the full request URL
 
-A common issue after deploying is a `403` error from the Power Pages Web API when a column isn't enabled for API access. When you hit this error, paste the **full API URL** and the **complete JSON error response**. The error message tells you exactly which table and column need to be fixed, and the plugin can update the table permission YAML and site settings for you.
+A common issue after deploying is a `403` error from the Power Pages Web API when a column isn't enabled for API access. When you encounter this error, paste the **full API URL** and the **complete JSON error response**. The error message tells you exactly which table and column need to be fixed, and the plugin can update the table permission YAML and site settings for you.
 
 **Example: Column not enabled for Web API (403)**
 
@@ -290,10 +290,10 @@ Response:
 }
 ```
 
-This error (`AttributePermissionIsMissing`) means the lookup column `_crd50_propertyid_value` exists in the Dataverse table but isn't listed in the table permission configuration for the Web API. The plugin resolves this by adding the missing column to the table permission YAML in `.powerpages-site/table-permissions/` and redeploying.
+This error (`AttributePermissionIsMissing`) means the lookup column `_crd50_propertyid_value` exists in the Dataverse table but isn't listed in the table permission configuration for the Web API. The plugin resolves this error by adding the missing column to the table permission YAML in `.powerpages-site/table-permissions/` and redeploying.
 
 > [!NOTE]
-> Power Pages Web API requires every column returned by an API call to be explicitly listed in the table permission. Lookup columns (prefixed with `_` and suffixed with `_value`) are easy to miss because their API name differs from the column's logical name in Dataverse. When you see `AttributePermissionIsMissing`, the fix is always to add that column to the table permission, not to change the API query.
+> Power Pages Web API requires every column returned by an API call to be explicitly listed in the table permission. Lookup columns (prefixed with `_` and suffixed with `_value`) are easy to miss because their API name differs from the column's logical name in Dataverse. When you see `AttributePermissionIsMissing`, always add that column to the table permission. Don't change the API query.
 
 ### Be specific about what you want
 
@@ -306,9 +306,9 @@ Vague requests produce vague results. Tell the plugin exactly what you need, inc
 | "Add some data" | "Add 20 sample job postings across 4 departments (Engineering, Marketing, Sales, HR) with realistic titles, salary ranges between $60k-$180k, and posted dates in the last 30 days" |
 | "Set up the API" | "Connect the JobListings component to the cr_jobposting Dataverse table. Replace the hardcoded array with a real API call that fetches title, department, salary, and posted date" |
 
-### Use screenshots for visual issues
+### Use screenshots for visual problems
 
-When the site doesn't look right in the browser, take a screenshot and paste it directly into the conversation or provide a file path. Visual context helps identify layout, spacing, and styling issues that are hard to describe in text.
+When the site doesn't look right in the browser, take a screenshot and paste it directly into the conversation or provide a file path. Visual context helps identify layout, spacing, and styling problems that are hard to describe in text.
 
 ```
 The header overlaps the hero section on mobile. Here's a screenshot:
@@ -332,7 +332,7 @@ Step 6: /integrate-webapi → Wire up real data
 ```
 
 > [!TIP]
-> After each step, check the browser preview. If something isn't right, fix it before moving on. It's easier to fix issues in one component than to untangle problems across an entire site.
+> After each step, check the browser preview. If something isn't right, fix it before moving on. It's easier to fix problems in one component than to untangle problems across an entire site.
 
 ### Ask for an explanation before approving
 
@@ -342,9 +342,9 @@ When you're unsure about a proposed change, especially for permissions, data mod
 Before you create the table permissions, explain what access each role will have and why. I want to understand the security implications.
 ```
 
-### Run skills independently to recover from issues
+### Run skills independently to recover from problems
 
-If a skill fails partway through, you don't need to start over. Each skill is designed to run independently and can pick up where things left off. For example, if `/integrate-webapi` fails on the third table, you can re-run it and it will detect the work already completed.
+If a skill fails partway through, you don't need to start over. Each skill is designed to run independently and can pick up where things left off. For example, if `/integrate-webapi` fails on the third table, you can re-run it and it detects the work already completed.
 
 ```
 /integrate-webapi failed while processing the cr_applications table. Here's the error: [paste error]. Resume the integration from where it stopped.
