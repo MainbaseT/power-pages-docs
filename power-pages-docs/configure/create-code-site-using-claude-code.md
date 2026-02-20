@@ -34,7 +34,7 @@ Before you begin, verify that you have the required software and permissions.
 | Power Platform CLI (PAC CLI) | Latest | [Install PAC CLI](/power-platform/developer/cli/introduction) |
 | Azure CLI | Latest | [Install Azure CLI](/cli/azure/install-azure-cli) |
 | GitHub Copilot CLI or Claude Code | Latest | [GitHub Copilot CLI](https://github.com/features/copilot/cli/) or [Claude Code](https://claude.ai/code) |
-| Visual Studio Code and Power Platform Tools extension (Optional) | Latest | [Download VS Code](https://code.visualstudio.com/) and [Install Power Platform Tools](https://learn.microsoft.com/power-pages/configure/vs-code-extension#visual-studio-code-extension-for-power-pages) |
+| Visual Studio Code and Power Platform Tools extension (Optional) | Latest | [Download VS Code](https://code.visualstudio.com/) and [Install Power Platform Tools](vs-code-extension.md#visual-studio-code-extension-for-power-pages) |
 
 You also need:
 
@@ -352,8 +352,8 @@ If a skill fails partway through, you don't need to start over. Each skill is de
 
 ### Related content
 
-- [Create and deploy a single-page application in Power Pages](https://learn.microsoft.com/power-pages/configure/create-code-sites)
-- [Power Pages Web API reference](https://learn.microsoft.com/power-pages/configure/web-api-overview)
-- [PAC CLI pages command reference](https://learn.microsoft.com/power-pages/configure/power-platform-cli)
+- [Create and deploy a single-page application in Power Pages](create-code-sites.md)
+- [Power Pages Web API reference](web-api-overview.md)
+- [PAC CLI pages command reference](power-platform-cli.md)
 - [GitHub Copilot CLI](https://github.com/features/copilot/cli/)
 - [Claude Code](https://claude.ai/code)
