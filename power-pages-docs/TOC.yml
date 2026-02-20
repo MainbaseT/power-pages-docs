@@ -510,6 +510,20 @@
       href: configure/advanced-config.md
 - name: Integrate Power Pages
   items:
+    - name: Work with Power Pages MCP server (preview)
+      items:
+        - name: MCP server overview
+          href: configure/mcp-overview.md
+        - name: Configure MCP server
+          items:
+            - name: Setup identity provider
+              href: configure/mcp-configure-entra.md
+            - name: Create and configure site settings
+              href: configure/mcp-configure-site-settings.md
+            - name: Configure redirect URIs for MCP clients
+              href: configure/mcp-redirect-uri.md
+        - name: Connect to MCP server
+          href: configure/mcp-connect-clients.md
     - name: Embed a Power Pages site in another website
       href: configure/embed-website.md
     - name: Set up Azure Front Door with Power Pages
