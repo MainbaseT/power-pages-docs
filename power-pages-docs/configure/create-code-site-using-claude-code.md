@@ -11,7 +11,7 @@ contributors:
 - shwetamurkute
 ---
 
-# Tutorial: Create and deploy a single-page application using GitHub Copilot CLI and Claude Code (preview)
+#  Get started with the Power Pages plugin for GitHub Copilot CLI and Claude Code (preview)
 
 The Power Pages plugin for [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and [Claude Code](https://claude.ai/code) provides an AI-assisted workflow for creating, deploying, and managing modern [*single-page application (SPA)*](/power-pages/configure/create-code-sites) sites on Power Pages. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
 
