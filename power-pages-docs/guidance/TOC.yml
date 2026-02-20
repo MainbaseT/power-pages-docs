@@ -9,6 +9,8 @@
           href: white-papers/architecture.md
         - name: Security white paper
           href: white-papers/security.md
+        - name: Authentication white paper
+          href: white-papers/authentication.md
     - name: Power BI
       items: 
         - name: "How to: Enable row level security in Power BI on Power Pages"
