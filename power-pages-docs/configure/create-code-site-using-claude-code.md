@@ -322,7 +322,7 @@ Fix the header so it doesn't overlap. It should be a fixed header with the conte
 
 Rather than describing an entire site in one prompt, build incrementally. Start with the structure and layout, then add features one at a time. This approach gives you a chance to review and course-correct at each step.
 
-
+```
 Step 1: /create-site → Get the basic scaffold and layout right
 Step 2: "Add a hero section to the home page with a search bar"
 Step 3: "Add a job listings page with filter and sort"
@@ -330,6 +330,7 @@ Step 4: "Add a job detail page that shows full description"
 Step 5: /setup-datamodel → Create tables now that you know the data shape
 Step 6: /integrate-webapi → Wire up real data
 
+```
 
 > [!TIP]
 > After each step, check the browser preview. If something isn't right, fix it before moving on. It's easier to fix problems in one component than to untangle problems across an entire site.
