@@ -1,5 +1,5 @@
 ---
-title: Tutorial on how to create and configure single-page application using agentic AI coding tool
+title: Get started with the Power Pages plugin for GitHub Copilot CLI and Claude Code (preview)
 description: This page provides a walk-through on how to create, customize, and deploy single-page applications for Microsoft Power Pages using agentic AI coding tool.
 author: neerajnandwana-msft
 ms.topic: tutorial
