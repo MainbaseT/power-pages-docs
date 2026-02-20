@@ -13,9 +13,9 @@ contributors:
 
 # Get started with the Power Pages plugin for GitHub Copilot CLI and Claude Code (preview)
 
-The Power Pages plugin for [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and [Claude Code](https://claude.ai/code) provides an AI-assisted workflow for creating, deploying, and managing modern [single-page application (SPA)](/power-pages/configure/create-code-sites) sites on Power Pages. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
+The Power Pages plugin for [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and [Claude Code](https://claude.ai/code) provides an AI-assisted workflow for creating, deploying, and managing modern [*single-page application (SPA)*](/power-pages/configure/create-code-sites) sites on Power Pages. Instead of manually scaffolding projects, writing boilerplate API code, and configuring permissions, you describe what you want in natural language, and the plugin handles the implementation.
 
-The plugin supports the full site development lifecycle through these conversational skills, from scaffolding a new site to deploying it, setting up Dataverse data models and configuring authentication.
+The plugin supports the full site development lifecycle through conversational skills, from scaffolding a new site to deploying it, setting up Dataverse data models, and configuring authentication.
 
 > [!IMPORTANT]
 > - This feature is a preview feature.
@@ -48,7 +48,7 @@ You also need:
 pac auth list           # Should show authenticated profile
 ```
 
-If you're not authenticated, run these commands:
+If you're not authenticated, run this command:
 
 ```powershell
 pac auth create --environment <Instance url>        # Authenticate to Power Platform
@@ -59,7 +59,7 @@ pac auth create --environment <Instance url>        # Authenticate to Power Plat
 
 ## Install the plugin
 
-You can install the Power Pages plugin from the marketplace. If you use GitHub Copilot CLI, see the [Copilot CLI extensions documentation](https://docs.github.com/copilot/concepts/agents/copilot-cli/about-copilot-cli) for equivalent install steps. The commands below use Claude Code syntax.
+Install the Power Pages plugin from the marketplace. If you use GitHub Copilot CLI, see the [Copilot CLI extensions documentation](https://docs.github.com/copilot/concepts/agents/copilot-cli/about-copilot-cli) for equivalent install steps. The commands below use Claude Code syntax.
 
 ### Install from marketplace
 
@@ -91,7 +91,7 @@ The plugin provides skills that cover the full lifecycle of a Power Pages site. 
 | Set up data model | `/setup-datamodel` | Creates Dataverse tables, columns, and relationships |
 | Add sample data (Optional) | `/add-sample-data` | Populates Dataverse tables with realistic test records |
 | Integrate Web API | `/integrate-webapi` | Generates typed API client code, services, and table permissions |
-| Set up authentication | `/setup-auth` | Adds login/logout functionality and role-based access control |
+| Set up authentication | `/setup-auth` | Adds sign-in/sign-out functionality and role-based access control |
 | Create web roles | `/create-webroles` | Generates web role YAML files for user access management |
 | Add SEO | `/add-seo` | Generates robots.txt, sitemap.xml, and meta tags |
 
@@ -107,7 +107,7 @@ A common end-to-end workflow follows this sequence:
 5. /add-sample-data   →  Populate tables with test records
 6. /integrate-webapi  →  Generate API client code and configure permissions
 7. /create-webroles   →  Define access roles
-8. /setup-auth        →  Add login/logout and role-based UI
+8. /setup-auth        →  Add sign-in/sign-out and role-based UI
 9. /add-seo           →  Search engine optimization
 10. /deploy-site      →  Push final changes live
 ```
@@ -119,18 +119,15 @@ A common end-to-end workflow follows this sequence:
 
 This walkthrough covers the full lifecycle of building a Power Pages site with the plugin, from scaffolding through deployment. Each step describes what you say and what the plugin does in response.
 
-> [!TIP]
-> You don't need to follow this exact order. Each skill checks its own prerequisites and tells you if something is missing. For example, you can run `/setup-auth` before `/integrate-webapi` if your site needs authentication first.
-
 ### Step 1: Create your site
 
-Describe the site you want in natural language what it's for, what pages it needs, and any design preferences like color scheme, layout style, or fonts. Run `/create-site` or just describe your site and the plugin recognizes the intent.
+Describe the site you want in natural language: what it's for, what pages it needs, and any design preferences like color scheme, layout style, or fonts. Run `/create-site` or just describe your site and the plugin recognizes the intent.
 
 The plugin asks you to pick a framework (React, Vue, Angular, or Astro) if you didn't specify one, then:
 
 1. Scaffolds the project from a template and applies your site name, colors, and design tokens.
 1. Installs dependencies, starts a development server, and opens a live browser preview.
-1. Builds out each page, component.
+1. Builds out each page, component, and route you requested with relevant images.
 1. Creates git commits at significant milestones so you have built-in rollback history.
 
 ### Step 2: Deploy your site
@@ -153,7 +150,7 @@ Run `/activate-site` to make the site publicly accessible. The plugin:
 1. Provisions a website record through the Power Platform API.
 1. Polls until the site is live and returns the public URL.
 
-At this point you have a working site at a public URL. The remaining steps add data, authentication, and SEO skip any that don't apply to your site.
+At this point you have a working site at a public URL. The remaining steps add data, authentication, and SEO. Skip any that don't apply to your site.
 
 ### Step 4: Set up your data model
 
@@ -174,7 +171,7 @@ Run `/add-sample-data` to populate your tables with test records. Requires the d
 The plugin:
 
 1. Reads the manifest to understand your tables, columns, and relationships.
-1. Generates contextually appropriate values, realistic emails, plausible dates, formatted currency amounts for each column type.
+1. Generates contextually appropriate values for each column type: realistic emails, plausible dates, and formatted currency amounts.
 1. Inserts records in dependency order (parent tables before child tables) and refreshes authentication tokens automatically during bulk inserts.
 
 ### Step 6: Integrate with the Dataverse Web API
@@ -203,10 +200,10 @@ Run `/create-webroles` to define user access roles. The plugin:
 
 ### Step 8: Set up authentication
 
-Run `/setup-auth` to add login and logout functionality. The plugin:
+Run `/setup-auth` to add sign-in and sign-out functionality. The plugin:
 
 1. Generates an authentication service for the Entra ID flow with anti-forgery token management.
-1. Creates a login/logout UI component integrated with your site layout.
+1. Creates a sign-in/sign-out UI component integrated with your site layout.
 1. Adds role-based access control utilities that show or hide UI elements based on the user's web roles.
 1. Uses your framework's patterns throughout (React hooks, Vue composables, or Angular services).
 
@@ -233,7 +230,13 @@ After you complete the skills, verify your Power Pages site works correctly.
 
 ## Tips and best practices
 
-The following tips help you get the most out of the plugin when building Power Pages sites.
+The following tips help you get the most out of the plugin and the AI coding agent when building Power Pages sites.
+
+### Watch terminal output for missing tools on first run
+
+The plugin provides the skills and workflows, but the AI coding agent-GitHub Copilot CLI or Claude Code—executes the actual commands on your machine. When you use these tools for the first time, watch the terminal output closely. The AI coding agent runs commands and scripts behind the scenes, and some of these depend on tools that might not be installed on your machine. If a step fails, the terminal output usually shows which tool or command couldn't be found.
+
+If you see an error like `command not found` or `is not recognized`, install the missing tool and re-trigger the workflow. The AI coding agent picks up where it left off after the tool is available.
 
 ### Review agent proposals before approving
 
@@ -346,7 +349,6 @@ If a skill fails partway through, you don't need to start over. Each skill is de
 ```
 /integrate-webapi failed while processing the cr_applications table. Here's the error: [paste error]. Resume the integration from where it stopped.
 ```
-
 
 ### Related content
 
