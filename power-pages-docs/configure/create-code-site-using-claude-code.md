@@ -130,7 +130,7 @@ The plugin asks you to pick a framework (React, Vue, Angular, or Astro) if you d
 
 1. Scaffolds the project from a template and applies your site name, colors, and design tokens.
 1. Installs dependencies, starts a development server, and opens a live browser preview.
-1. Builds out each page, component, and route you requested using real images from Unsplash.
+1. Builds out each page, component.
 1. Creates git commits at significant milestones so you have built-in rollback history.
 
 ### Step 2: Deploy your site
