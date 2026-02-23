@@ -2,7 +2,7 @@
 title: Add an agent from the set up workspace
 description: Add an agent to Power Pages for instant, AI-powered help. Improve user experience and resolve questions faster with easy setup instructions.
 ms.topic: how-to
-ms.date: 01/05/2026
+ms.date: 02/20/2026
 ms.update-cycle: 180-days
 author: nageshbhat-msft
 ms.author: nabha
@@ -37,6 +37,7 @@ By default, [an agent that you add to your Power Pages site](#add-an-agent) can 
 To use AI-powered agent features in Power Pages, make sure the following conditions are met:
 
 - The tenant admin turns on the [Publish Copilots with AI features](/microsoft-copilot-studio/security-and-governance) setting in the Power Platform admin center.
+- Agents created from Power Pages use the HTTP node to communicate with the site. Make sure the HTTP connector isn't blocked in the selected environment.
 - The agent uses Copilot Studio generative answers. Learn more about quotas and limits in [Quotas, limits, app registration, certificates, and configuration values for Copilot Studio](/microsoft-copilot-studio/requirements-quotas).
 
 ## Add an agent
