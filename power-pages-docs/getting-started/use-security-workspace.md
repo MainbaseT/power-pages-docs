@@ -3,7 +3,7 @@ title: Overview of the Security workspace
 description: Enhance site resilience with security scans, control access to data, and protect against exploits using Power Pages security workspace.
 author: DanaMartens
 ms.topic: concept-article
-ms.date: 02/23/2026
+ms.date: 02/27/2026
 ms.subservice:
 ms.author: bipuldeora
 ms.reviewer: dmartens
@@ -22,6 +22,8 @@ To open the Security workspace:
 
 1. Open the [design studio](use-design-studio.md).
 1. On the left pane, select **Security**.
+
+  :::image type="content" source="media/use-security-workspace/security-agent-overview.png" alt-text="A screenshot of the security workspace option selected and showing different option within it":::
 
 ## Monitor
 
